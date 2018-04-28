@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/3darrays.dir/3darrays.cpp.o  -o 3darrays 

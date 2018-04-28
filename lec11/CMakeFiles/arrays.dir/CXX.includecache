@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/mddarr/aptitude/lec11/Complex.cpp
+iostream
+-
+sstream
+-
+string
+-
+Complex.h
+/home/mddarr/aptitude/lec11/Complex.h
+
+/home/mddarr/aptitude/lec11/Complex.h
+iostream
+-
+
+/home/mddarr/aptitude/lec11/testcomplex.cpp
+iostream
+-
+sstream
+-
+Complex.h
+/home/mddarr/aptitude/lec11/Complex.h
+

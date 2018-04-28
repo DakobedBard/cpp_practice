@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/templates6.dir/templates6.cpp.o  -o templates6 

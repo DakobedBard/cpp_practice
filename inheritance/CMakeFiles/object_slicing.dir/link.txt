@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/object_slicing.dir/object_slicing.cpp.o  -o object_slicing 

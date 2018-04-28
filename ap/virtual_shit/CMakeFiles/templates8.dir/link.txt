@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/templates8.dir/templates8.cpp.o  -o templates8 

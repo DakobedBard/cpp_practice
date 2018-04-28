@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/arrays.dir/arrays.cpp.o  -o arrays 

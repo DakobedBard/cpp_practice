@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/geeks_stream.dir/geek_stream.cpp.o  -o geeks_stream 

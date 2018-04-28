@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/virtual_destructor.dir/virtual_destructor.cpp.o  -o virtual_destructor 

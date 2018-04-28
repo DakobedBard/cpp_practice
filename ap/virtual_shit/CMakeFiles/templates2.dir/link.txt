@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/templates2.dir/templates2.cpp.o  -o templates2 

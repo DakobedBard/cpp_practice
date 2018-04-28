@@ -1,0 +1,3 @@
+/home/mddarr/aptitude/operators/scope_resolution/CMakeFiles/rebuild_cache.dir
+/home/mddarr/aptitude/operators/scope_resolution/CMakeFiles/edit_cache.dir
+/home/mddarr/aptitude/operators/scope_resolution/CMakeFiles/resolution.dir

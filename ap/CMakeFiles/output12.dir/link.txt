@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/output12.dir/output12.cpp.o  -o output12 

@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/derived_virtual.dir/derived_virtual.cpp.o  -o derived_virtual 

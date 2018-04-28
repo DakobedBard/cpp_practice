@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/templated_vector_class.dir/templated_vector_class.cpp.o  -o templated_vector_class 

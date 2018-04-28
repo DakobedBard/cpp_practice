@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/resolution.dir/resolution2.cpp.o  -o resolution 

@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/move_semantics2.dir/move_semantics2.cpp.o  -o move_semantics2 

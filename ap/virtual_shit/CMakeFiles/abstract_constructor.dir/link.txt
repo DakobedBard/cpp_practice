@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/abstract_constructor.dir/abstract_constructor.cpp.o  -o abstract_constructor 

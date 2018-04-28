@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/output24.dir/output24.cpp.o  -o output24 

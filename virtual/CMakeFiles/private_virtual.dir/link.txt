@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/private_virtual.dir/private_virtual.cpp.o  -o private_virtual 

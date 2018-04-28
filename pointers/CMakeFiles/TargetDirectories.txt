@@ -1,0 +1,6 @@
+/home/mddarr/aptitude/pointers/CMakeFiles/rebuild_cache.dir
+/home/mddarr/aptitude/pointers/CMakeFiles/edit_cache.dir
+/home/mddarr/aptitude/pointers/CMakeFiles/chain.dir
+/home/mddarr/aptitude/pointers/CMakeFiles/delete_this.dir
+/home/mddarr/aptitude/pointers/CMakeFiles/nullptr.dir
+/home/mddarr/aptitude/pointers/CMakeFiles/dangling_pointers.dir

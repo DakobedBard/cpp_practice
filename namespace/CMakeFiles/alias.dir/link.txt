@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/alias.dir/alias.cpp.o  -o alias 

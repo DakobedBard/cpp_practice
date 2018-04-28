@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/output18.dir/output18.cpp.o  -o output18 

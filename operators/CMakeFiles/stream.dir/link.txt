@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/stream.dir/streams.cpp.o  -o stream 

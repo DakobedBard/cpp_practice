@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/mddarr/aptitude/operators/Complex.h
+iostream
+-
+
+/home/mddarr/aptitude/operators/main.cpp
+Complex.h
+/home/mddarr/aptitude/operators/Complex.h
+

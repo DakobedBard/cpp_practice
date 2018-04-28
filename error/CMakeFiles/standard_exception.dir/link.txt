@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/standard_exception.dir/standard_exception.cpp.o  -o standard_exception 

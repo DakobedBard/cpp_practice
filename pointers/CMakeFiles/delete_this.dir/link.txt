@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/delete_this.dir/delete_this.cpp.o  -o delete_this 
