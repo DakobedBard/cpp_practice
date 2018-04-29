@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/declare.dir/declare.cpp.o  -o declare 

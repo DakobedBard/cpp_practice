@@ -21,3 +21,6 @@ add_executable(class_template ${class_template} )
 
 set(function_template function_template.cpp )
 add_executable(function_template ${function_template} )
+
+set(IsSameClass IsSameClass.cpp )
+add_executable(IsSameClass ${IsSameClass} )

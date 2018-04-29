@@ -43,8 +43,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/move_semantics.dir/DependInfo.cmake"
-  "CMakeFiles/move_semantics2.dir/DependInfo.cmake"
-  "CMakeFiles/rvalue_references.dir/DependInfo.cmake"
-  "CMakeFiles/return_rvalue_ref.dir/DependInfo.cmake"
+  "CMakeFiles/shared_ptr.dir/DependInfo.cmake"
   )

@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named conversion_operator
+
+# Build rule for target.
+conversion_operator: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 conversion_operator
+.PHONY : conversion_operator
+
+# fast build rule for target.
+conversion_operator/fast:
+	$(MAKE) -f CMakeFiles/conversion_operator.dir/build.make CMakeFiles/conversion_operator.dir/build
+.PHONY : conversion_operator/fast
+
+#=============================================================================
 # Target rules for targets named copy_swap
 
 # Build rule for target.
@@ -122,6 +135,33 @@ copy_swap: cmake_check_build_system
 copy_swap/fast:
 	$(MAKE) -f CMakeFiles/copy_swap.dir/build.make CMakeFiles/copy_swap.dir/build
 .PHONY : copy_swap/fast
+
+conversion_operator.o: conversion_operator.cpp.o
+
+.PHONY : conversion_operator.o
+
+# target to build an object file
+conversion_operator.cpp.o:
+	$(MAKE) -f CMakeFiles/conversion_operator.dir/build.make CMakeFiles/conversion_operator.dir/conversion_operator.cpp.o
+.PHONY : conversion_operator.cpp.o
+
+conversion_operator.i: conversion_operator.cpp.i
+
+.PHONY : conversion_operator.i
+
+# target to preprocess a source file
+conversion_operator.cpp.i:
+	$(MAKE) -f CMakeFiles/conversion_operator.dir/build.make CMakeFiles/conversion_operator.dir/conversion_operator.cpp.i
+.PHONY : conversion_operator.cpp.i
+
+conversion_operator.s: conversion_operator.cpp.s
+
+.PHONY : conversion_operator.s
+
+# target to generate assembly for a file
+conversion_operator.cpp.s:
+	$(MAKE) -f CMakeFiles/conversion_operator.dir/build.make CMakeFiles/conversion_operator.dir/conversion_operator.cpp.s
+.PHONY : conversion_operator.cpp.s
 
 copy_swap.o: copy_swap.cpp.o
 
@@ -158,7 +198,11 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... conversion_operator"
 	@echo "... copy_swap"
+	@echo "... conversion_operator.o"
+	@echo "... conversion_operator.i"
+	@echo "... conversion_operator.s"
 	@echo "... copy_swap.o"
 	@echo "... copy_swap.i"
 	@echo "... copy_swap.s"

@@ -1,0 +1,4 @@
+/home/mddarr/aptitude/static/CMakeFiles/rebuild_cache.dir
+/home/mddarr/aptitude/static/CMakeFiles/edit_cache.dir
+/home/mddarr/aptitude/static/CMakeFiles/static_member_variables.dir
+/home/mddarr/aptitude/static/CMakeFiles/ref.dir

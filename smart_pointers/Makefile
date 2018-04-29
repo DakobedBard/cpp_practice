@@ -111,164 +111,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named move_semantics
+# Target rules for targets named shared_ptr
 
 # Build rule for target.
-move_semantics: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 move_semantics
-.PHONY : move_semantics
+shared_ptr: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 shared_ptr
+.PHONY : shared_ptr
 
 # fast build rule for target.
-move_semantics/fast:
-	$(MAKE) -f CMakeFiles/move_semantics.dir/build.make CMakeFiles/move_semantics.dir/build
-.PHONY : move_semantics/fast
+shared_ptr/fast:
+	$(MAKE) -f CMakeFiles/shared_ptr.dir/build.make CMakeFiles/shared_ptr.dir/build
+.PHONY : shared_ptr/fast
 
-#=============================================================================
-# Target rules for targets named move_semantics2
+shared_ptr.o: shared_ptr.cpp.o
 
-# Build rule for target.
-move_semantics2: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 move_semantics2
-.PHONY : move_semantics2
-
-# fast build rule for target.
-move_semantics2/fast:
-	$(MAKE) -f CMakeFiles/move_semantics2.dir/build.make CMakeFiles/move_semantics2.dir/build
-.PHONY : move_semantics2/fast
-
-#=============================================================================
-# Target rules for targets named rvalue_references
-
-# Build rule for target.
-rvalue_references: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rvalue_references
-.PHONY : rvalue_references
-
-# fast build rule for target.
-rvalue_references/fast:
-	$(MAKE) -f CMakeFiles/rvalue_references.dir/build.make CMakeFiles/rvalue_references.dir/build
-.PHONY : rvalue_references/fast
-
-#=============================================================================
-# Target rules for targets named return_rvalue_ref
-
-# Build rule for target.
-return_rvalue_ref: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 return_rvalue_ref
-.PHONY : return_rvalue_ref
-
-# fast build rule for target.
-return_rvalue_ref/fast:
-	$(MAKE) -f CMakeFiles/return_rvalue_ref.dir/build.make CMakeFiles/return_rvalue_ref.dir/build
-.PHONY : return_rvalue_ref/fast
-
-move_semantics.o: move_semantics.cpp.o
-
-.PHONY : move_semantics.o
+.PHONY : shared_ptr.o
 
 # target to build an object file
-move_semantics.cpp.o:
-	$(MAKE) -f CMakeFiles/move_semantics.dir/build.make CMakeFiles/move_semantics.dir/move_semantics.cpp.o
-.PHONY : move_semantics.cpp.o
+shared_ptr.cpp.o:
+	$(MAKE) -f CMakeFiles/shared_ptr.dir/build.make CMakeFiles/shared_ptr.dir/shared_ptr.cpp.o
+.PHONY : shared_ptr.cpp.o
 
-move_semantics.i: move_semantics.cpp.i
+shared_ptr.i: shared_ptr.cpp.i
 
-.PHONY : move_semantics.i
-
-# target to preprocess a source file
-move_semantics.cpp.i:
-	$(MAKE) -f CMakeFiles/move_semantics.dir/build.make CMakeFiles/move_semantics.dir/move_semantics.cpp.i
-.PHONY : move_semantics.cpp.i
-
-move_semantics.s: move_semantics.cpp.s
-
-.PHONY : move_semantics.s
-
-# target to generate assembly for a file
-move_semantics.cpp.s:
-	$(MAKE) -f CMakeFiles/move_semantics.dir/build.make CMakeFiles/move_semantics.dir/move_semantics.cpp.s
-.PHONY : move_semantics.cpp.s
-
-move_semantics2.o: move_semantics2.cpp.o
-
-.PHONY : move_semantics2.o
-
-# target to build an object file
-move_semantics2.cpp.o:
-	$(MAKE) -f CMakeFiles/move_semantics2.dir/build.make CMakeFiles/move_semantics2.dir/move_semantics2.cpp.o
-.PHONY : move_semantics2.cpp.o
-
-move_semantics2.i: move_semantics2.cpp.i
-
-.PHONY : move_semantics2.i
+.PHONY : shared_ptr.i
 
 # target to preprocess a source file
-move_semantics2.cpp.i:
-	$(MAKE) -f CMakeFiles/move_semantics2.dir/build.make CMakeFiles/move_semantics2.dir/move_semantics2.cpp.i
-.PHONY : move_semantics2.cpp.i
+shared_ptr.cpp.i:
+	$(MAKE) -f CMakeFiles/shared_ptr.dir/build.make CMakeFiles/shared_ptr.dir/shared_ptr.cpp.i
+.PHONY : shared_ptr.cpp.i
 
-move_semantics2.s: move_semantics2.cpp.s
+shared_ptr.s: shared_ptr.cpp.s
 
-.PHONY : move_semantics2.s
-
-# target to generate assembly for a file
-move_semantics2.cpp.s:
-	$(MAKE) -f CMakeFiles/move_semantics2.dir/build.make CMakeFiles/move_semantics2.dir/move_semantics2.cpp.s
-.PHONY : move_semantics2.cpp.s
-
-return_rvalue_ref.o: return_rvalue_ref.cpp.o
-
-.PHONY : return_rvalue_ref.o
-
-# target to build an object file
-return_rvalue_ref.cpp.o:
-	$(MAKE) -f CMakeFiles/return_rvalue_ref.dir/build.make CMakeFiles/return_rvalue_ref.dir/return_rvalue_ref.cpp.o
-.PHONY : return_rvalue_ref.cpp.o
-
-return_rvalue_ref.i: return_rvalue_ref.cpp.i
-
-.PHONY : return_rvalue_ref.i
-
-# target to preprocess a source file
-return_rvalue_ref.cpp.i:
-	$(MAKE) -f CMakeFiles/return_rvalue_ref.dir/build.make CMakeFiles/return_rvalue_ref.dir/return_rvalue_ref.cpp.i
-.PHONY : return_rvalue_ref.cpp.i
-
-return_rvalue_ref.s: return_rvalue_ref.cpp.s
-
-.PHONY : return_rvalue_ref.s
+.PHONY : shared_ptr.s
 
 # target to generate assembly for a file
-return_rvalue_ref.cpp.s:
-	$(MAKE) -f CMakeFiles/return_rvalue_ref.dir/build.make CMakeFiles/return_rvalue_ref.dir/return_rvalue_ref.cpp.s
-.PHONY : return_rvalue_ref.cpp.s
-
-rvalue_references.o: rvalue_references.cpp.o
-
-.PHONY : rvalue_references.o
-
-# target to build an object file
-rvalue_references.cpp.o:
-	$(MAKE) -f CMakeFiles/rvalue_references.dir/build.make CMakeFiles/rvalue_references.dir/rvalue_references.cpp.o
-.PHONY : rvalue_references.cpp.o
-
-rvalue_references.i: rvalue_references.cpp.i
-
-.PHONY : rvalue_references.i
-
-# target to preprocess a source file
-rvalue_references.cpp.i:
-	$(MAKE) -f CMakeFiles/rvalue_references.dir/build.make CMakeFiles/rvalue_references.dir/rvalue_references.cpp.i
-.PHONY : rvalue_references.cpp.i
-
-rvalue_references.s: rvalue_references.cpp.s
-
-.PHONY : rvalue_references.s
-
-# target to generate assembly for a file
-rvalue_references.cpp.s:
-	$(MAKE) -f CMakeFiles/rvalue_references.dir/build.make CMakeFiles/rvalue_references.dir/rvalue_references.cpp.s
-.PHONY : rvalue_references.cpp.s
+shared_ptr.cpp.s:
+	$(MAKE) -f CMakeFiles/shared_ptr.dir/build.make CMakeFiles/shared_ptr.dir/shared_ptr.cpp.s
+.PHONY : shared_ptr.cpp.s
 
 # Help Target
 help:
@@ -277,23 +157,11 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... move_semantics"
 	@echo "... edit_cache"
-	@echo "... move_semantics2"
-	@echo "... rvalue_references"
-	@echo "... return_rvalue_ref"
-	@echo "... move_semantics.o"
-	@echo "... move_semantics.i"
-	@echo "... move_semantics.s"
-	@echo "... move_semantics2.o"
-	@echo "... move_semantics2.i"
-	@echo "... move_semantics2.s"
-	@echo "... return_rvalue_ref.o"
-	@echo "... return_rvalue_ref.i"
-	@echo "... return_rvalue_ref.s"
-	@echo "... rvalue_references.o"
-	@echo "... rvalue_references.i"
-	@echo "... rvalue_references.s"
+	@echo "... shared_ptr"
+	@echo "... shared_ptr.o"
+	@echo "... shared_ptr.i"
+	@echo "... shared_ptr.s"
 .PHONY : help
 
 

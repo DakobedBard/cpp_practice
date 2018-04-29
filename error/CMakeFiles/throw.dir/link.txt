@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/throw.dir/throw.cpp.o  -o throw 

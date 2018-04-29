@@ -11,5 +11,8 @@ ADD_DEFINITIONS(
 set(copy_swap copy_swap.cpp )
 add_executable(copy_swap ${copy_swap} )
 
+set(conversion_operator conversion_operator.cpp )
+add_executable(conversion_operator ${conversion_operator} )
+
 
 

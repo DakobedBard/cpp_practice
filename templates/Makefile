@@ -149,6 +149,46 @@ function_template/fast:
 	$(MAKE) -f CMakeFiles/function_template.dir/build.make CMakeFiles/function_template.dir/build
 .PHONY : function_template/fast
 
+#=============================================================================
+# Target rules for targets named IsSameClass
+
+# Build rule for target.
+IsSameClass: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 IsSameClass
+.PHONY : IsSameClass
+
+# fast build rule for target.
+IsSameClass/fast:
+	$(MAKE) -f CMakeFiles/IsSameClass.dir/build.make CMakeFiles/IsSameClass.dir/build
+.PHONY : IsSameClass/fast
+
+IsSameClass.o: IsSameClass.cpp.o
+
+.PHONY : IsSameClass.o
+
+# target to build an object file
+IsSameClass.cpp.o:
+	$(MAKE) -f CMakeFiles/IsSameClass.dir/build.make CMakeFiles/IsSameClass.dir/IsSameClass.cpp.o
+.PHONY : IsSameClass.cpp.o
+
+IsSameClass.i: IsSameClass.cpp.i
+
+.PHONY : IsSameClass.i
+
+# target to preprocess a source file
+IsSameClass.cpp.i:
+	$(MAKE) -f CMakeFiles/IsSameClass.dir/build.make CMakeFiles/IsSameClass.dir/IsSameClass.cpp.i
+.PHONY : IsSameClass.cpp.i
+
+IsSameClass.s: IsSameClass.cpp.s
+
+.PHONY : IsSameClass.s
+
+# target to generate assembly for a file
+IsSameClass.cpp.s:
+	$(MAKE) -f CMakeFiles/IsSameClass.dir/build.make CMakeFiles/IsSameClass.dir/IsSameClass.cpp.s
+.PHONY : IsSameClass.cpp.s
+
 class_template.o: class_template.cpp.o
 
 .PHONY : class_template.o
@@ -237,10 +277,14 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... edit_cache"
 	@echo "... template_class"
 	@echo "... class_template"
 	@echo "... function_template"
-	@echo "... edit_cache"
+	@echo "... IsSameClass"
+	@echo "... IsSameClass.o"
+	@echo "... IsSameClass.i"
+	@echo "... IsSameClass.s"
 	@echo "... class_template.o"
 	@echo "... class_template.i"
 	@echo "... class_template.s"

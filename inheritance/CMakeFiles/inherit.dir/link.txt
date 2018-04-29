@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/inherit.dir/inherit.cpp.o  -o inherit 

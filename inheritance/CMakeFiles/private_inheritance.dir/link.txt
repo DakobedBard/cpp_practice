@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/private_inheritance.dir/private_inheritance.cpp.o  -o private_inheritance 

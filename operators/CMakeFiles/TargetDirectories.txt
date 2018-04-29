@@ -1,3 +1,4 @@
 /home/mddarr/aptitude/operators/CMakeFiles/rebuild_cache.dir
 /home/mddarr/aptitude/operators/CMakeFiles/edit_cache.dir
+/home/mddarr/aptitude/operators/CMakeFiles/conversion_operator.dir
 /home/mddarr/aptitude/operators/CMakeFiles/copy_swap.dir

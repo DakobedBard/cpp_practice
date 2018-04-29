@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/list_iterator.dir/list_iterator.cpp.o  -o list_iterator 

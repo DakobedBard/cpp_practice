@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/mddarr/aptitude/inheritance
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
@@ -77,6 +66,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -111,44 +111,204 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named object_slicing
+# Target rules for targets named private_inheritance
 
 # Build rule for target.
-object_slicing: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 object_slicing
-.PHONY : object_slicing
+private_inheritance: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 private_inheritance
+.PHONY : private_inheritance
 
 # fast build rule for target.
-object_slicing/fast:
-	$(MAKE) -f CMakeFiles/object_slicing.dir/build.make CMakeFiles/object_slicing.dir/build
-.PHONY : object_slicing/fast
+private_inheritance/fast:
+	$(MAKE) -f CMakeFiles/private_inheritance.dir/build.make CMakeFiles/private_inheritance.dir/build
+.PHONY : private_inheritance/fast
 
-object_slicing.o: object_slicing.cpp.o
+#=============================================================================
+# Target rules for targets named inheritance
 
-.PHONY : object_slicing.o
+# Build rule for target.
+inheritance: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 inheritance
+.PHONY : inheritance
+
+# fast build rule for target.
+inheritance/fast:
+	$(MAKE) -f CMakeFiles/inheritance.dir/build.make CMakeFiles/inheritance.dir/build
+.PHONY : inheritance/fast
+
+#=============================================================================
+# Target rules for targets named constructors
+
+# Build rule for target.
+constructors: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 constructors
+.PHONY : constructors
+
+# fast build rule for target.
+constructors/fast:
+	$(MAKE) -f CMakeFiles/constructors.dir/build.make CMakeFiles/constructors.dir/build
+.PHONY : constructors/fast
+
+#=============================================================================
+# Target rules for targets named isderivedfrom
+
+# Build rule for target.
+isderivedfrom: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 isderivedfrom
+.PHONY : isderivedfrom
+
+# fast build rule for target.
+isderivedfrom/fast:
+	$(MAKE) -f CMakeFiles/isderivedfrom.dir/build.make CMakeFiles/isderivedfrom.dir/build
+.PHONY : isderivedfrom/fast
+
+#=============================================================================
+# Target rules for targets named hide_overloaded_methods
+
+# Build rule for target.
+hide_overloaded_methods: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 hide_overloaded_methods
+.PHONY : hide_overloaded_methods
+
+# fast build rule for target.
+hide_overloaded_methods/fast:
+	$(MAKE) -f CMakeFiles/hide_overloaded_methods.dir/build.make CMakeFiles/hide_overloaded_methods.dir/build
+.PHONY : hide_overloaded_methods/fast
+
+constructors.o: constructors.cpp.o
+
+.PHONY : constructors.o
 
 # target to build an object file
-object_slicing.cpp.o:
-	$(MAKE) -f CMakeFiles/object_slicing.dir/build.make CMakeFiles/object_slicing.dir/object_slicing.cpp.o
-.PHONY : object_slicing.cpp.o
+constructors.cpp.o:
+	$(MAKE) -f CMakeFiles/constructors.dir/build.make CMakeFiles/constructors.dir/constructors.cpp.o
+.PHONY : constructors.cpp.o
 
-object_slicing.i: object_slicing.cpp.i
+constructors.i: constructors.cpp.i
 
-.PHONY : object_slicing.i
+.PHONY : constructors.i
 
 # target to preprocess a source file
-object_slicing.cpp.i:
-	$(MAKE) -f CMakeFiles/object_slicing.dir/build.make CMakeFiles/object_slicing.dir/object_slicing.cpp.i
-.PHONY : object_slicing.cpp.i
+constructors.cpp.i:
+	$(MAKE) -f CMakeFiles/constructors.dir/build.make CMakeFiles/constructors.dir/constructors.cpp.i
+.PHONY : constructors.cpp.i
 
-object_slicing.s: object_slicing.cpp.s
+constructors.s: constructors.cpp.s
 
-.PHONY : object_slicing.s
+.PHONY : constructors.s
 
 # target to generate assembly for a file
-object_slicing.cpp.s:
-	$(MAKE) -f CMakeFiles/object_slicing.dir/build.make CMakeFiles/object_slicing.dir/object_slicing.cpp.s
-.PHONY : object_slicing.cpp.s
+constructors.cpp.s:
+	$(MAKE) -f CMakeFiles/constructors.dir/build.make CMakeFiles/constructors.dir/constructors.cpp.s
+.PHONY : constructors.cpp.s
+
+hide_overloaded_methods.o: hide_overloaded_methods.cpp.o
+
+.PHONY : hide_overloaded_methods.o
+
+# target to build an object file
+hide_overloaded_methods.cpp.o:
+	$(MAKE) -f CMakeFiles/hide_overloaded_methods.dir/build.make CMakeFiles/hide_overloaded_methods.dir/hide_overloaded_methods.cpp.o
+.PHONY : hide_overloaded_methods.cpp.o
+
+hide_overloaded_methods.i: hide_overloaded_methods.cpp.i
+
+.PHONY : hide_overloaded_methods.i
+
+# target to preprocess a source file
+hide_overloaded_methods.cpp.i:
+	$(MAKE) -f CMakeFiles/hide_overloaded_methods.dir/build.make CMakeFiles/hide_overloaded_methods.dir/hide_overloaded_methods.cpp.i
+.PHONY : hide_overloaded_methods.cpp.i
+
+hide_overloaded_methods.s: hide_overloaded_methods.cpp.s
+
+.PHONY : hide_overloaded_methods.s
+
+# target to generate assembly for a file
+hide_overloaded_methods.cpp.s:
+	$(MAKE) -f CMakeFiles/hide_overloaded_methods.dir/build.make CMakeFiles/hide_overloaded_methods.dir/hide_overloaded_methods.cpp.s
+.PHONY : hide_overloaded_methods.cpp.s
+
+inheritance.o: inheritance.cpp.o
+
+.PHONY : inheritance.o
+
+# target to build an object file
+inheritance.cpp.o:
+	$(MAKE) -f CMakeFiles/inheritance.dir/build.make CMakeFiles/inheritance.dir/inheritance.cpp.o
+.PHONY : inheritance.cpp.o
+
+inheritance.i: inheritance.cpp.i
+
+.PHONY : inheritance.i
+
+# target to preprocess a source file
+inheritance.cpp.i:
+	$(MAKE) -f CMakeFiles/inheritance.dir/build.make CMakeFiles/inheritance.dir/inheritance.cpp.i
+.PHONY : inheritance.cpp.i
+
+inheritance.s: inheritance.cpp.s
+
+.PHONY : inheritance.s
+
+# target to generate assembly for a file
+inheritance.cpp.s:
+	$(MAKE) -f CMakeFiles/inheritance.dir/build.make CMakeFiles/inheritance.dir/inheritance.cpp.s
+.PHONY : inheritance.cpp.s
+
+isderivedfrom.o: isderivedfrom.cpp.o
+
+.PHONY : isderivedfrom.o
+
+# target to build an object file
+isderivedfrom.cpp.o:
+	$(MAKE) -f CMakeFiles/isderivedfrom.dir/build.make CMakeFiles/isderivedfrom.dir/isderivedfrom.cpp.o
+.PHONY : isderivedfrom.cpp.o
+
+isderivedfrom.i: isderivedfrom.cpp.i
+
+.PHONY : isderivedfrom.i
+
+# target to preprocess a source file
+isderivedfrom.cpp.i:
+	$(MAKE) -f CMakeFiles/isderivedfrom.dir/build.make CMakeFiles/isderivedfrom.dir/isderivedfrom.cpp.i
+.PHONY : isderivedfrom.cpp.i
+
+isderivedfrom.s: isderivedfrom.cpp.s
+
+.PHONY : isderivedfrom.s
+
+# target to generate assembly for a file
+isderivedfrom.cpp.s:
+	$(MAKE) -f CMakeFiles/isderivedfrom.dir/build.make CMakeFiles/isderivedfrom.dir/isderivedfrom.cpp.s
+.PHONY : isderivedfrom.cpp.s
+
+private_inheritance.o: private_inheritance.cpp.o
+
+.PHONY : private_inheritance.o
+
+# target to build an object file
+private_inheritance.cpp.o:
+	$(MAKE) -f CMakeFiles/private_inheritance.dir/build.make CMakeFiles/private_inheritance.dir/private_inheritance.cpp.o
+.PHONY : private_inheritance.cpp.o
+
+private_inheritance.i: private_inheritance.cpp.i
+
+.PHONY : private_inheritance.i
+
+# target to preprocess a source file
+private_inheritance.cpp.i:
+	$(MAKE) -f CMakeFiles/private_inheritance.dir/build.make CMakeFiles/private_inheritance.dir/private_inheritance.cpp.i
+.PHONY : private_inheritance.cpp.i
+
+private_inheritance.s: private_inheritance.cpp.s
+
+.PHONY : private_inheritance.s
+
+# target to generate assembly for a file
+private_inheritance.cpp.s:
+	$(MAKE) -f CMakeFiles/private_inheritance.dir/build.make CMakeFiles/private_inheritance.dir/private_inheritance.cpp.s
+.PHONY : private_inheritance.cpp.s
 
 # Help Target
 help:
@@ -156,12 +316,28 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... object_slicing"
-	@echo "... object_slicing.o"
-	@echo "... object_slicing.i"
-	@echo "... object_slicing.s"
+	@echo "... private_inheritance"
+	@echo "... inheritance"
+	@echo "... constructors"
+	@echo "... isderivedfrom"
+	@echo "... rebuild_cache"
+	@echo "... hide_overloaded_methods"
+	@echo "... constructors.o"
+	@echo "... constructors.i"
+	@echo "... constructors.s"
+	@echo "... hide_overloaded_methods.o"
+	@echo "... hide_overloaded_methods.i"
+	@echo "... hide_overloaded_methods.s"
+	@echo "... inheritance.o"
+	@echo "... inheritance.i"
+	@echo "... inheritance.s"
+	@echo "... isderivedfrom.o"
+	@echo "... isderivedfrom.i"
+	@echo "... isderivedfrom.s"
+	@echo "... private_inheritance.o"
+	@echo "... private_inheritance.i"
+	@echo "... private_inheritance.s"
 .PHONY : help
 
 

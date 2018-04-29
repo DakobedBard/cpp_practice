@@ -60,39 +60,39 @@ CMAKE_SOURCE_DIR = /home/mddarr/aptitude/arrays
 CMAKE_BINARY_DIR = /home/mddarr/aptitude/arrays
 
 #=============================================================================
-# Target rules for target CMakeFiles/3darrays.dir
+# Target rules for target CMakeFiles/sizeof.dir
 
 # All Build rule for target.
-CMakeFiles/3darrays.dir/all:
-	$(MAKE) -f CMakeFiles/3darrays.dir/build.make CMakeFiles/3darrays.dir/depend
-	$(MAKE) -f CMakeFiles/3darrays.dir/build.make CMakeFiles/3darrays.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mddarr/aptitude/arrays/CMakeFiles --progress-num=1,2 "Built target 3darrays"
-.PHONY : CMakeFiles/3darrays.dir/all
+CMakeFiles/sizeof.dir/all:
+	$(MAKE) -f CMakeFiles/sizeof.dir/build.make CMakeFiles/sizeof.dir/depend
+	$(MAKE) -f CMakeFiles/sizeof.dir/build.make CMakeFiles/sizeof.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mddarr/aptitude/arrays/CMakeFiles --progress-num=1,2 "Built target sizeof"
+.PHONY : CMakeFiles/sizeof.dir/all
 
 # Include target in all.
-all: CMakeFiles/3darrays.dir/all
+all: CMakeFiles/sizeof.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/3darrays.dir/rule: cmake_check_build_system
+CMakeFiles/sizeof.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/mddarr/aptitude/arrays/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/3darrays.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/sizeof.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/mddarr/aptitude/arrays/CMakeFiles 0
-.PHONY : CMakeFiles/3darrays.dir/rule
+.PHONY : CMakeFiles/sizeof.dir/rule
 
 # Convenience name for target.
-3darrays: CMakeFiles/3darrays.dir/rule
+sizeof: CMakeFiles/sizeof.dir/rule
 
-.PHONY : 3darrays
-
-# clean rule for target.
-CMakeFiles/3darrays.dir/clean:
-	$(MAKE) -f CMakeFiles/3darrays.dir/build.make CMakeFiles/3darrays.dir/clean
-.PHONY : CMakeFiles/3darrays.dir/clean
+.PHONY : sizeof
 
 # clean rule for target.
-clean: CMakeFiles/3darrays.dir/clean
+CMakeFiles/sizeof.dir/clean:
+	$(MAKE) -f CMakeFiles/sizeof.dir/build.make CMakeFiles/sizeof.dir/clean
+.PHONY : CMakeFiles/sizeof.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/sizeof.dir/clean
 
 .PHONY : clean
 

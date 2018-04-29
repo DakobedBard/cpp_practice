@@ -43,5 +43,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/conversion_operator.dir/DependInfo.cmake"
   "CMakeFiles/copy_swap.dir/DependInfo.cmake"
   )

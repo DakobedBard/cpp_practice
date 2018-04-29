@@ -111,44 +111,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named 3darrays
+# Target rules for targets named sizeof
 
 # Build rule for target.
-3darrays: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 3darrays
-.PHONY : 3darrays
+sizeof: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sizeof
+.PHONY : sizeof
 
 # fast build rule for target.
-3darrays/fast:
-	$(MAKE) -f CMakeFiles/3darrays.dir/build.make CMakeFiles/3darrays.dir/build
-.PHONY : 3darrays/fast
+sizeof/fast:
+	$(MAKE) -f CMakeFiles/sizeof.dir/build.make CMakeFiles/sizeof.dir/build
+.PHONY : sizeof/fast
 
-3darrays.o: 3darrays.cpp.o
+sizeof.o: sizeof.cpp.o
 
-.PHONY : 3darrays.o
+.PHONY : sizeof.o
 
 # target to build an object file
-3darrays.cpp.o:
-	$(MAKE) -f CMakeFiles/3darrays.dir/build.make CMakeFiles/3darrays.dir/3darrays.cpp.o
-.PHONY : 3darrays.cpp.o
+sizeof.cpp.o:
+	$(MAKE) -f CMakeFiles/sizeof.dir/build.make CMakeFiles/sizeof.dir/sizeof.cpp.o
+.PHONY : sizeof.cpp.o
 
-3darrays.i: 3darrays.cpp.i
+sizeof.i: sizeof.cpp.i
 
-.PHONY : 3darrays.i
+.PHONY : sizeof.i
 
 # target to preprocess a source file
-3darrays.cpp.i:
-	$(MAKE) -f CMakeFiles/3darrays.dir/build.make CMakeFiles/3darrays.dir/3darrays.cpp.i
-.PHONY : 3darrays.cpp.i
+sizeof.cpp.i:
+	$(MAKE) -f CMakeFiles/sizeof.dir/build.make CMakeFiles/sizeof.dir/sizeof.cpp.i
+.PHONY : sizeof.cpp.i
 
-3darrays.s: 3darrays.cpp.s
+sizeof.s: sizeof.cpp.s
 
-.PHONY : 3darrays.s
+.PHONY : sizeof.s
 
 # target to generate assembly for a file
-3darrays.cpp.s:
-	$(MAKE) -f CMakeFiles/3darrays.dir/build.make CMakeFiles/3darrays.dir/3darrays.cpp.s
-.PHONY : 3darrays.cpp.s
+sizeof.cpp.s:
+	$(MAKE) -f CMakeFiles/sizeof.dir/build.make CMakeFiles/sizeof.dir/sizeof.cpp.s
+.PHONY : sizeof.cpp.s
 
 # Help Target
 help:
@@ -158,10 +158,10 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... 3darrays"
-	@echo "... 3darrays.o"
-	@echo "... 3darrays.i"
-	@echo "... 3darrays.s"
+	@echo "... sizeof"
+	@echo "... sizeof.o"
+	@echo "... sizeof.i"
+	@echo "... sizeof.s"
 .PHONY : help
 
 

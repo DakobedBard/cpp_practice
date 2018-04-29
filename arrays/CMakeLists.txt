@@ -16,8 +16,9 @@ ADD_DEFINITIONS(
 
 
 
-set(3darrays 3darrays.cpp)
-add_executable(3darrays ${3darrays} )
+set(sizeof sizeof.cpp)
+add_executable(sizeof ${sizeof} )
+
 
 
 

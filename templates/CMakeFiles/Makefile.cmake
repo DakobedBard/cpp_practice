@@ -46,4 +46,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/template_class.dir/DependInfo.cmake"
   "CMakeFiles/class_template.dir/DependInfo.cmake"
   "CMakeFiles/function_template.dir/DependInfo.cmake"
+  "CMakeFiles/IsSameClass.dir/DependInfo.cmake"
   )

@@ -7,9 +7,20 @@ ADD_DEFINITIONS(
 
 
 
-set(object_slicing object_slicing.cpp  )
-add_executable(object_slicing ${object_slicing} )
+set(inheritance inheritance.cpp  )
+add_executable(inheritance ${inheritance} )
+
+set(constructors constructors.cpp  )
+add_executable(constructors ${constructors} )
+
+set(isderivedfrom isderivedfrom.cpp  )
+add_executable(isderivedfrom ${isderivedfrom} )
 
 
+set(hide_overloaded_methods hide_overloaded_methods.cpp  )
+add_executable(hide_overloaded_methods ${hide_overloaded_methods} )
+
+set(private_inheritance private_inheritance.cpp  )
+add_executable(private_inheritance ${private_inheritance} )
 
 

@@ -25,7 +25,7 @@ add_executable(output ${output})
 set(base_exceptions base_exceptions.cpp)
 add_executable(base_exceptions ${base_exceptions})
 
-set(stack_unwind stack_unwind.cpp)
-add_executable(stack_unwind ${stack_unwind})
+set(throw throw.cpp)
+add_executable(throw ${throw})
 
 

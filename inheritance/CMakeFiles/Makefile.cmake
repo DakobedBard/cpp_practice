@@ -43,5 +43,9 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/object_slicing.dir/DependInfo.cmake"
+  "CMakeFiles/private_inheritance.dir/DependInfo.cmake"
+  "CMakeFiles/inheritance.dir/DependInfo.cmake"
+  "CMakeFiles/constructors.dir/DependInfo.cmake"
+  "CMakeFiles/isderivedfrom.dir/DependInfo.cmake"
+  "CMakeFiles/hide_overloaded_methods.dir/DependInfo.cmake"
   )
