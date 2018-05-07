@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/static_casting.dir/static_casting.cpp.o  -o static_casting 

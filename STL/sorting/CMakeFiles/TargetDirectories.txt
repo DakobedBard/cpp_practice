@@ -1,0 +1,4 @@
+/home/mddarr/aptitude/STL/sorting/CMakeFiles/rebuild_cache.dir
+/home/mddarr/aptitude/STL/sorting/CMakeFiles/comparator.dir
+/home/mddarr/aptitude/STL/sorting/CMakeFiles/edit_cache.dir
+/home/mddarr/aptitude/STL/sorting/CMakeFiles/sort_vector.dir

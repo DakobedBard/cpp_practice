@@ -8,11 +8,8 @@ ADD_DEFINITIONS(
 #set(complex main.cpp Complex.h)
 #add_executable(complex ${complex} )
 
-set(copy_swap copy_swap.cpp )
+set(copy_swap Matrix.h )
 add_executable(copy_swap ${copy_swap} )
-
-set(conversion_operator conversion_operator.cpp )
-add_executable(conversion_operator ${conversion_operator} )
 
 
 

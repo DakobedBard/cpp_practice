@@ -24,3 +24,10 @@ add_executable(function_template ${function_template} )
 
 set(IsSameClass IsSameClass.cpp )
 add_executable(IsSameClass ${IsSameClass} )
+
+set(meta_template meta_template.cpp )
+add_executable(meta_template ${meta_template} )
+
+
+set(explicit_instantiation explicit_instantiation.cpp )
+add_executable(explicit_instantiation ${explicit_instantiation} )

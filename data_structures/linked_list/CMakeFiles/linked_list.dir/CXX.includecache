@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/mddarr/aptitude/data_structures/linked_list/LinkedList.h
+iostream
+-
+set
+-
+
+/home/mddarr/aptitude/data_structures/linked_list/main.cpp
+LinkedList.h
+/home/mddarr/aptitude/data_structures/linked_list/LinkedList.h
+

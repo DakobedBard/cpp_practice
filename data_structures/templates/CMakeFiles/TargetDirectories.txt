@@ -1,0 +1,5 @@
+/home/mddarr/aptitude/data_structures/templates/CMakeFiles/rebuild_cache.dir
+/home/mddarr/aptitude/data_structures/templates/CMakeFiles/LinkedList.dir
+/home/mddarr/aptitude/data_structures/templates/CMakeFiles/priority_queue.dir
+/home/mddarr/aptitude/data_structures/templates/CMakeFiles/edit_cache.dir
+/home/mddarr/aptitude/data_structures/templates/CMakeFiles/bst.dir

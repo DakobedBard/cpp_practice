@@ -1,0 +1,7 @@
+/home/mddarr/aptitude/casting/CMakeFiles/edit_cache.dir
+/home/mddarr/aptitude/casting/CMakeFiles/static_casting.dir
+/home/mddarr/aptitude/casting/CMakeFiles/type_conversion.dir
+/home/mddarr/aptitude/casting/CMakeFiles/rebuild_cache.dir
+/home/mddarr/aptitude/casting/CMakeFiles/inheritance_casting.dir
+/home/mddarr/aptitude/casting/CMakeFiles/dynamic_cast.dir
+/home/mddarr/aptitude/casting/CMakeFiles/const_casting.dir

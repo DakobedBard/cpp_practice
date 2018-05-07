@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/inheritance_casting.dir/inheritance_casting.cpp.o  -o inheritance_casting 

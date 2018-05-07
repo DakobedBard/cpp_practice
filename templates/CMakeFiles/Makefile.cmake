@@ -43,6 +43,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/meta_template.dir/DependInfo.cmake"
   "CMakeFiles/template_class.dir/DependInfo.cmake"
   "CMakeFiles/class_template.dir/DependInfo.cmake"
   "CMakeFiles/function_template.dir/DependInfo.cmake"

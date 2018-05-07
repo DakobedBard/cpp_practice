@@ -66,7 +66,7 @@ void template_function(Type s){
 	std:: cout << s << std::endl;
 }
 
-template void template_function<double>(double);	// This appears to be explicit instantiation....
+template  void template_function<double>(double);	// This appears to be explicit instantiation....
 
 
 // Now lets define a templated function implicitly...
@@ -78,9 +78,24 @@ void implicit_template_function(Type s){
 }
 
 
+
+
+
+
+class SomeClass{
+  public:
+	static int data;
+};
+
+SomeClass::data =0;
+
+
+
 int main(){
 
 	template_function(4.5);
+	int numerator, denominator;
+	float quotient = numerator/denominator;
 	
 	// Let's call our implictly instantiated template function...
 

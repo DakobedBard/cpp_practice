@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/mddarr/aptitude/data_structures/queue/queue.h
+iostream
+-
+iostream
+-
+
+/home/mddarr/aptitude/data_structures/queue/queue_test.cpp
+iostream
+-
+queue.h
+/home/mddarr/aptitude/data_structures/queue/queue.h
+

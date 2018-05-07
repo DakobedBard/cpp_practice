@@ -11,6 +11,8 @@ ADD_DEFINITIONS(
 set(unique unique.cpp  )
 add_executable(unique ${unique} )
 
+set(unique_vec unique_vec.cpp  )
+add_executable(unique_vec ${unique_vec} )
 
 
 

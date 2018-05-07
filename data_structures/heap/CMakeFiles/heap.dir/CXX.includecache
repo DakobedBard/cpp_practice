@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/mddarr/aptitude/data_structures/heap/heap.cpp
+heap.h
+/home/mddarr/aptitude/data_structures/heap/heap.h
+vector
+-
+
+/home/mddarr/aptitude/data_structures/heap/heap.h
+vector
+-
+
+/home/mddarr/aptitude/data_structures/heap/main.cpp
+heap.h
+/home/mddarr/aptitude/data_structures/heap/heap.h
+vector
+-
+

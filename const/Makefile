@@ -123,6 +123,59 @@ const_member_functions/fast:
 	$(MAKE) -f CMakeFiles/const_member_functions.dir/build.make CMakeFiles/const_member_functions.dir/build
 .PHONY : const_member_functions/fast
 
+#=============================================================================
+# Target rules for targets named const_int
+
+# Build rule for target.
+const_int: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 const_int
+.PHONY : const_int
+
+# fast build rule for target.
+const_int/fast:
+	$(MAKE) -f CMakeFiles/const_int.dir/build.make CMakeFiles/const_int.dir/build
+.PHONY : const_int/fast
+
+#=============================================================================
+# Target rules for targets named function_overloading
+
+# Build rule for target.
+function_overloading: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 function_overloading
+.PHONY : function_overloading
+
+# fast build rule for target.
+function_overloading/fast:
+	$(MAKE) -f CMakeFiles/function_overloading.dir/build.make CMakeFiles/function_overloading.dir/build
+.PHONY : function_overloading/fast
+
+const_int.o: const_int.cpp.o
+
+.PHONY : const_int.o
+
+# target to build an object file
+const_int.cpp.o:
+	$(MAKE) -f CMakeFiles/const_int.dir/build.make CMakeFiles/const_int.dir/const_int.cpp.o
+.PHONY : const_int.cpp.o
+
+const_int.i: const_int.cpp.i
+
+.PHONY : const_int.i
+
+# target to preprocess a source file
+const_int.cpp.i:
+	$(MAKE) -f CMakeFiles/const_int.dir/build.make CMakeFiles/const_int.dir/const_int.cpp.i
+.PHONY : const_int.cpp.i
+
+const_int.s: const_int.cpp.s
+
+.PHONY : const_int.s
+
+# target to generate assembly for a file
+const_int.cpp.s:
+	$(MAKE) -f CMakeFiles/const_int.dir/build.make CMakeFiles/const_int.dir/const_int.cpp.s
+.PHONY : const_int.cpp.s
+
 const_member_functions.o: const_member_functions.cpp.o
 
 .PHONY : const_member_functions.o
@@ -150,18 +203,53 @@ const_member_functions.cpp.s:
 	$(MAKE) -f CMakeFiles/const_member_functions.dir/build.make CMakeFiles/const_member_functions.dir/const_member_functions.cpp.s
 .PHONY : const_member_functions.cpp.s
 
+function_overloading.o: function_overloading.cpp.o
+
+.PHONY : function_overloading.o
+
+# target to build an object file
+function_overloading.cpp.o:
+	$(MAKE) -f CMakeFiles/function_overloading.dir/build.make CMakeFiles/function_overloading.dir/function_overloading.cpp.o
+.PHONY : function_overloading.cpp.o
+
+function_overloading.i: function_overloading.cpp.i
+
+.PHONY : function_overloading.i
+
+# target to preprocess a source file
+function_overloading.cpp.i:
+	$(MAKE) -f CMakeFiles/function_overloading.dir/build.make CMakeFiles/function_overloading.dir/function_overloading.cpp.i
+.PHONY : function_overloading.cpp.i
+
+function_overloading.s: function_overloading.cpp.s
+
+.PHONY : function_overloading.s
+
+# target to generate assembly for a file
+function_overloading.cpp.s:
+	$(MAKE) -f CMakeFiles/function_overloading.dir/build.make CMakeFiles/function_overloading.dir/function_overloading.cpp.s
+.PHONY : function_overloading.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
-	@echo "... edit_cache"
 	@echo "... const_member_functions"
+	@echo "... const_int"
+	@echo "... rebuild_cache"
+	@echo "... function_overloading"
+	@echo "... edit_cache"
+	@echo "... const_int.o"
+	@echo "... const_int.i"
+	@echo "... const_int.s"
 	@echo "... const_member_functions.o"
 	@echo "... const_member_functions.i"
 	@echo "... const_member_functions.s"
+	@echo "... function_overloading.o"
+	@echo "... function_overloading.i"
+	@echo "... function_overloading.s"
 .PHONY : help
 
 

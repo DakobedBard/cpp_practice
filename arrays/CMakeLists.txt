@@ -20,6 +20,14 @@ set(sizeof sizeof.cpp)
 add_executable(sizeof ${sizeof} )
 
 
+set(operations operations.cpp)
+add_executable(operations ${operations} )
+
+set(vectors vectors.cpp)
+add_executable(vectors ${vectors} )
+
+set(Reverse reverse_array.cpp )
+add_executable(Reverse ${Reverse} )
 
 
 

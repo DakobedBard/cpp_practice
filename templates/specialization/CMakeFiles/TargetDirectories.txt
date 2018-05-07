@@ -1,0 +1,3 @@
+/home/mddarr/aptitude/templates/specialization/CMakeFiles/rebuild_cache.dir
+/home/mddarr/aptitude/templates/specialization/CMakeFiles/edit_cache.dir
+/home/mddarr/aptitude/templates/specialization/CMakeFiles/explicit_specialization.cpp.dir

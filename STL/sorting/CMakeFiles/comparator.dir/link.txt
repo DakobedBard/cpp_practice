@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/comparator.dir/comparator.cpp.o  -o comparator 

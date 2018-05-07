@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/stack.dir/queue_test.cpp.o  -o stack 

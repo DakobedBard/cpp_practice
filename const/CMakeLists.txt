@@ -10,6 +10,13 @@ ADD_DEFINITIONS(
 set(const_member_functions const_member_functions.cpp  )
 add_executable(const_member_functions ${const_member_functions} )
 
+set(function_overloading function_overloading.cpp  )
+add_executable(function_overloading ${function_overloading} )
+
+
+set(const_int const_int.cpp  )
+add_executable(const_int ${const_int} )
+
 
 
 

@@ -123,6 +123,45 @@ shared_cycle/fast:
 	$(MAKE) -f CMakeFiles/shared_cycle.dir/build.make CMakeFiles/shared_cycle.dir/build
 .PHONY : shared_cycle/fast
 
+#=============================================================================
+# Target rules for targets named weak_cycle
+
+# Build rule for target.
+weak_cycle: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 weak_cycle
+.PHONY : weak_cycle
+
+# fast build rule for target.
+weak_cycle/fast:
+	$(MAKE) -f CMakeFiles/weak_cycle.dir/build.make CMakeFiles/weak_cycle.dir/build
+.PHONY : weak_cycle/fast
+
+#=============================================================================
+# Target rules for targets named shared_vector
+
+# Build rule for target.
+shared_vector: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 shared_vector
+.PHONY : shared_vector
+
+# fast build rule for target.
+shared_vector/fast:
+	$(MAKE) -f CMakeFiles/shared_vector.dir/build.make CMakeFiles/shared_vector.dir/build
+.PHONY : shared_vector/fast
+
+#=============================================================================
+# Target rules for targets named shared_ptr
+
+# Build rule for target.
+shared_ptr: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 shared_ptr
+.PHONY : shared_ptr
+
+# fast build rule for target.
+shared_ptr/fast:
+	$(MAKE) -f CMakeFiles/shared_ptr.dir/build.make CMakeFiles/shared_ptr.dir/build
+.PHONY : shared_ptr/fast
+
 shared_cycle.o: shared_cycle.cpp.o
 
 .PHONY : shared_cycle.o
@@ -150,18 +189,111 @@ shared_cycle.cpp.s:
 	$(MAKE) -f CMakeFiles/shared_cycle.dir/build.make CMakeFiles/shared_cycle.dir/shared_cycle.cpp.s
 .PHONY : shared_cycle.cpp.s
 
+shared_ptr.o: shared_ptr.cpp.o
+
+.PHONY : shared_ptr.o
+
+# target to build an object file
+shared_ptr.cpp.o:
+	$(MAKE) -f CMakeFiles/shared_ptr.dir/build.make CMakeFiles/shared_ptr.dir/shared_ptr.cpp.o
+.PHONY : shared_ptr.cpp.o
+
+shared_ptr.i: shared_ptr.cpp.i
+
+.PHONY : shared_ptr.i
+
+# target to preprocess a source file
+shared_ptr.cpp.i:
+	$(MAKE) -f CMakeFiles/shared_ptr.dir/build.make CMakeFiles/shared_ptr.dir/shared_ptr.cpp.i
+.PHONY : shared_ptr.cpp.i
+
+shared_ptr.s: shared_ptr.cpp.s
+
+.PHONY : shared_ptr.s
+
+# target to generate assembly for a file
+shared_ptr.cpp.s:
+	$(MAKE) -f CMakeFiles/shared_ptr.dir/build.make CMakeFiles/shared_ptr.dir/shared_ptr.cpp.s
+.PHONY : shared_ptr.cpp.s
+
+shared_vector.o: shared_vector.cpp.o
+
+.PHONY : shared_vector.o
+
+# target to build an object file
+shared_vector.cpp.o:
+	$(MAKE) -f CMakeFiles/shared_vector.dir/build.make CMakeFiles/shared_vector.dir/shared_vector.cpp.o
+.PHONY : shared_vector.cpp.o
+
+shared_vector.i: shared_vector.cpp.i
+
+.PHONY : shared_vector.i
+
+# target to preprocess a source file
+shared_vector.cpp.i:
+	$(MAKE) -f CMakeFiles/shared_vector.dir/build.make CMakeFiles/shared_vector.dir/shared_vector.cpp.i
+.PHONY : shared_vector.cpp.i
+
+shared_vector.s: shared_vector.cpp.s
+
+.PHONY : shared_vector.s
+
+# target to generate assembly for a file
+shared_vector.cpp.s:
+	$(MAKE) -f CMakeFiles/shared_vector.dir/build.make CMakeFiles/shared_vector.dir/shared_vector.cpp.s
+.PHONY : shared_vector.cpp.s
+
+weak_cycle.o: weak_cycle.cpp.o
+
+.PHONY : weak_cycle.o
+
+# target to build an object file
+weak_cycle.cpp.o:
+	$(MAKE) -f CMakeFiles/weak_cycle.dir/build.make CMakeFiles/weak_cycle.dir/weak_cycle.cpp.o
+.PHONY : weak_cycle.cpp.o
+
+weak_cycle.i: weak_cycle.cpp.i
+
+.PHONY : weak_cycle.i
+
+# target to preprocess a source file
+weak_cycle.cpp.i:
+	$(MAKE) -f CMakeFiles/weak_cycle.dir/build.make CMakeFiles/weak_cycle.dir/weak_cycle.cpp.i
+.PHONY : weak_cycle.cpp.i
+
+weak_cycle.s: weak_cycle.cpp.s
+
+.PHONY : weak_cycle.s
+
+# target to generate assembly for a file
+weak_cycle.cpp.s:
+	$(MAKE) -f CMakeFiles/weak_cycle.dir/build.make CMakeFiles/weak_cycle.dir/weak_cycle.cpp.s
+.PHONY : weak_cycle.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
-	@echo "... edit_cache"
 	@echo "... shared_cycle"
+	@echo "... rebuild_cache"
+	@echo "... weak_cycle"
+	@echo "... shared_vector"
+	@echo "... edit_cache"
+	@echo "... shared_ptr"
 	@echo "... shared_cycle.o"
 	@echo "... shared_cycle.i"
 	@echo "... shared_cycle.s"
+	@echo "... shared_ptr.o"
+	@echo "... shared_ptr.i"
+	@echo "... shared_ptr.s"
+	@echo "... shared_vector.o"
+	@echo "... shared_vector.i"
+	@echo "... shared_vector.s"
+	@echo "... weak_cycle.o"
+	@echo "... weak_cycle.i"
+	@echo "... weak_cycle.s"
 .PHONY : help
 
 

@@ -14,15 +14,12 @@ ADD_DEFINITIONS(
 
 
 
-set(transform transform.cpp)
-add_executable(transform ${transform} )
+set(sort_vector sort_vector.cpp)
+add_executable(sort_vector ${sort_vector} )
 
-set(std_transform std_transform.cpp)
-add_executable(std_transform ${std_transform} )
 
-set(matrix matrix.cpp)
-add_executable(matrix ${matrix} )
-
+set(comparator comparator.cpp)
+add_executable(comparator ${comparator} )
 
 
 

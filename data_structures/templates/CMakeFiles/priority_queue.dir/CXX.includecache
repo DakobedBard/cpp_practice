@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/mddarr/aptitude/data_structures/templates/heap_test.cpp
+priority_queue.h
+/home/mddarr/aptitude/data_structures/templates/priority_queue.h
+
+/home/mddarr/aptitude/data_structures/templates/priority_queue.h
+vector
+-
+stdexcept
+-
+

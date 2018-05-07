@@ -1,5 +1,6 @@
 /home/mddarr/aptitude/templates/CMakeFiles/rebuild_cache.dir
 /home/mddarr/aptitude/templates/CMakeFiles/edit_cache.dir
+/home/mddarr/aptitude/templates/CMakeFiles/meta_template.dir
 /home/mddarr/aptitude/templates/CMakeFiles/template_class.dir
 /home/mddarr/aptitude/templates/CMakeFiles/class_template.dir
 /home/mddarr/aptitude/templates/CMakeFiles/function_template.dir

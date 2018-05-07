@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named operations
+
+# Build rule for target.
+operations: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 operations
+.PHONY : operations
+
+# fast build rule for target.
+operations/fast:
+	$(MAKE) -f CMakeFiles/operations.dir/build.make CMakeFiles/operations.dir/build
+.PHONY : operations/fast
+
+#=============================================================================
 # Target rules for targets named sizeof
 
 # Build rule for target.
@@ -122,6 +135,86 @@ sizeof: cmake_check_build_system
 sizeof/fast:
 	$(MAKE) -f CMakeFiles/sizeof.dir/build.make CMakeFiles/sizeof.dir/build
 .PHONY : sizeof/fast
+
+#=============================================================================
+# Target rules for targets named vectors
+
+# Build rule for target.
+vectors: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 vectors
+.PHONY : vectors
+
+# fast build rule for target.
+vectors/fast:
+	$(MAKE) -f CMakeFiles/vectors.dir/build.make CMakeFiles/vectors.dir/build
+.PHONY : vectors/fast
+
+#=============================================================================
+# Target rules for targets named Reverse
+
+# Build rule for target.
+Reverse: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Reverse
+.PHONY : Reverse
+
+# fast build rule for target.
+Reverse/fast:
+	$(MAKE) -f CMakeFiles/Reverse.dir/build.make CMakeFiles/Reverse.dir/build
+.PHONY : Reverse/fast
+
+operations.o: operations.cpp.o
+
+.PHONY : operations.o
+
+# target to build an object file
+operations.cpp.o:
+	$(MAKE) -f CMakeFiles/operations.dir/build.make CMakeFiles/operations.dir/operations.cpp.o
+.PHONY : operations.cpp.o
+
+operations.i: operations.cpp.i
+
+.PHONY : operations.i
+
+# target to preprocess a source file
+operations.cpp.i:
+	$(MAKE) -f CMakeFiles/operations.dir/build.make CMakeFiles/operations.dir/operations.cpp.i
+.PHONY : operations.cpp.i
+
+operations.s: operations.cpp.s
+
+.PHONY : operations.s
+
+# target to generate assembly for a file
+operations.cpp.s:
+	$(MAKE) -f CMakeFiles/operations.dir/build.make CMakeFiles/operations.dir/operations.cpp.s
+.PHONY : operations.cpp.s
+
+reverse_array.o: reverse_array.cpp.o
+
+.PHONY : reverse_array.o
+
+# target to build an object file
+reverse_array.cpp.o:
+	$(MAKE) -f CMakeFiles/Reverse.dir/build.make CMakeFiles/Reverse.dir/reverse_array.cpp.o
+.PHONY : reverse_array.cpp.o
+
+reverse_array.i: reverse_array.cpp.i
+
+.PHONY : reverse_array.i
+
+# target to preprocess a source file
+reverse_array.cpp.i:
+	$(MAKE) -f CMakeFiles/Reverse.dir/build.make CMakeFiles/Reverse.dir/reverse_array.cpp.i
+.PHONY : reverse_array.cpp.i
+
+reverse_array.s: reverse_array.cpp.s
+
+.PHONY : reverse_array.s
+
+# target to generate assembly for a file
+reverse_array.cpp.s:
+	$(MAKE) -f CMakeFiles/Reverse.dir/build.make CMakeFiles/Reverse.dir/reverse_array.cpp.s
+.PHONY : reverse_array.cpp.s
 
 sizeof.o: sizeof.cpp.o
 
@@ -150,6 +243,33 @@ sizeof.cpp.s:
 	$(MAKE) -f CMakeFiles/sizeof.dir/build.make CMakeFiles/sizeof.dir/sizeof.cpp.s
 .PHONY : sizeof.cpp.s
 
+vectors.o: vectors.cpp.o
+
+.PHONY : vectors.o
+
+# target to build an object file
+vectors.cpp.o:
+	$(MAKE) -f CMakeFiles/vectors.dir/build.make CMakeFiles/vectors.dir/vectors.cpp.o
+.PHONY : vectors.cpp.o
+
+vectors.i: vectors.cpp.i
+
+.PHONY : vectors.i
+
+# target to preprocess a source file
+vectors.cpp.i:
+	$(MAKE) -f CMakeFiles/vectors.dir/build.make CMakeFiles/vectors.dir/vectors.cpp.i
+.PHONY : vectors.cpp.i
+
+vectors.s: vectors.cpp.s
+
+.PHONY : vectors.s
+
+# target to generate assembly for a file
+vectors.cpp.s:
+	$(MAKE) -f CMakeFiles/vectors.dir/build.make CMakeFiles/vectors.dir/vectors.cpp.s
+.PHONY : vectors.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -158,10 +278,22 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... operations"
 	@echo "... sizeof"
+	@echo "... vectors"
+	@echo "... Reverse"
+	@echo "... operations.o"
+	@echo "... operations.i"
+	@echo "... operations.s"
+	@echo "... reverse_array.o"
+	@echo "... reverse_array.i"
+	@echo "... reverse_array.s"
 	@echo "... sizeof.o"
 	@echo "... sizeof.i"
 	@echo "... sizeof.s"
+	@echo "... vectors.o"
+	@echo "... vectors.i"
+	@echo "... vectors.s"
 .PHONY : help
 
 

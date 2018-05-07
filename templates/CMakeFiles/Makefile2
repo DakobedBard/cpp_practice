@@ -60,13 +60,50 @@ CMAKE_SOURCE_DIR = /home/mddarr/aptitude/templates
 CMAKE_BINARY_DIR = /home/mddarr/aptitude/templates
 
 #=============================================================================
+# Target rules for target CMakeFiles/meta_template.dir
+
+# All Build rule for target.
+CMakeFiles/meta_template.dir/all:
+	$(MAKE) -f CMakeFiles/meta_template.dir/build.make CMakeFiles/meta_template.dir/depend
+	$(MAKE) -f CMakeFiles/meta_template.dir/build.make CMakeFiles/meta_template.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mddarr/aptitude/templates/CMakeFiles --progress-num=7,8 "Built target meta_template"
+.PHONY : CMakeFiles/meta_template.dir/all
+
+# Include target in all.
+all: CMakeFiles/meta_template.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/meta_template.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mddarr/aptitude/templates/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/meta_template.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mddarr/aptitude/templates/CMakeFiles 0
+.PHONY : CMakeFiles/meta_template.dir/rule
+
+# Convenience name for target.
+meta_template: CMakeFiles/meta_template.dir/rule
+
+.PHONY : meta_template
+
+# clean rule for target.
+CMakeFiles/meta_template.dir/clean:
+	$(MAKE) -f CMakeFiles/meta_template.dir/build.make CMakeFiles/meta_template.dir/clean
+.PHONY : CMakeFiles/meta_template.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/meta_template.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/template_class.dir
 
 # All Build rule for target.
 CMakeFiles/template_class.dir/all:
 	$(MAKE) -f CMakeFiles/template_class.dir/build.make CMakeFiles/template_class.dir/depend
 	$(MAKE) -f CMakeFiles/template_class.dir/build.make CMakeFiles/template_class.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mddarr/aptitude/templates/CMakeFiles --progress-num=7,8 "Built target template_class"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mddarr/aptitude/templates/CMakeFiles --progress-num=9,10 "Built target template_class"
 .PHONY : CMakeFiles/template_class.dir/all
 
 # Include target in all.

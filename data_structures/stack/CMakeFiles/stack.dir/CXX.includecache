@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/mddarr/aptitude/data_structures/stack/Exception.h
+iostream
+-
+string
+-
+
+/home/mddarr/aptitude/data_structures/stack/stack.h
+iostream
+-
+Exception.h
+/home/mddarr/aptitude/data_structures/stack/Exception.h
+
+/home/mddarr/aptitude/data_structures/stack/stack_test.cpp
+stack.h
+/home/mddarr/aptitude/data_structures/stack/stack.h
+iostream
+-
+

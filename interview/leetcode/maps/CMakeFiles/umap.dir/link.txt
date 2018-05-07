@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/umap.dir/umap.cpp.o  -o umap 

@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/mddarr/aptitude/data_structures/bst/bst.h
+iostream
+-
+iostream
+-
+cstdlib
+-
+
+/home/mddarr/aptitude/data_structures/bst/bst_test.cpp
+bst.h
+/home/mddarr/aptitude/data_structures/bst/bst.h
+

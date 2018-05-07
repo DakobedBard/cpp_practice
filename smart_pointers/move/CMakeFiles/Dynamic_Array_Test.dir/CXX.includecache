@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/mddarr/aptitude/smart_pointers/move/Dynamic_Array.h
+iostream
+-
+
+/home/mddarr/aptitude/smart_pointers/move/Dynamic_Array_Test.cpp
+iostream
+-
+chrono
+-
+Dynamic_Array.h
+/home/mddarr/aptitude/smart_pointers/move/Dynamic_Array.h
+

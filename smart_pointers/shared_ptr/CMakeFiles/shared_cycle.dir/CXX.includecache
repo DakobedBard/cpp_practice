@@ -7,4 +7,8 @@
 #IncludeRegexTransform: 
 
 /home/mddarr/aptitude/smart_pointers/shared_ptr/shared_cycle.cpp
+memory
+-
+iostream
+-
 

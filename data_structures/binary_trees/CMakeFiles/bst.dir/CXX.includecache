@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/mddarr/aptitude/data_structures/binary_trees/bst.h
+iostream
+-
+
+/home/mddarr/aptitude/data_structures/binary_trees/bst_main.cpp
+bst.h
+/home/mddarr/aptitude/data_structures/binary_trees/bst.h
+

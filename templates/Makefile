@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named meta_template
+
+# Build rule for target.
+meta_template: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 meta_template
+.PHONY : meta_template
+
+# fast build rule for target.
+meta_template/fast:
+	$(MAKE) -f CMakeFiles/meta_template.dir/build.make CMakeFiles/meta_template.dir/build
+.PHONY : meta_template/fast
+
+#=============================================================================
 # Target rules for targets named template_class
 
 # Build rule for target.
@@ -243,6 +256,33 @@ function_template.cpp.s:
 	$(MAKE) -f CMakeFiles/function_template.dir/build.make CMakeFiles/function_template.dir/function_template.cpp.s
 .PHONY : function_template.cpp.s
 
+meta_template.o: meta_template.cpp.o
+
+.PHONY : meta_template.o
+
+# target to build an object file
+meta_template.cpp.o:
+	$(MAKE) -f CMakeFiles/meta_template.dir/build.make CMakeFiles/meta_template.dir/meta_template.cpp.o
+.PHONY : meta_template.cpp.o
+
+meta_template.i: meta_template.cpp.i
+
+.PHONY : meta_template.i
+
+# target to preprocess a source file
+meta_template.cpp.i:
+	$(MAKE) -f CMakeFiles/meta_template.dir/build.make CMakeFiles/meta_template.dir/meta_template.cpp.i
+.PHONY : meta_template.cpp.i
+
+meta_template.s: meta_template.cpp.s
+
+.PHONY : meta_template.s
+
+# target to generate assembly for a file
+meta_template.cpp.s:
+	$(MAKE) -f CMakeFiles/meta_template.dir/build.make CMakeFiles/meta_template.dir/meta_template.cpp.s
+.PHONY : meta_template.cpp.s
+
 template_class.o: template_class.cpp.o
 
 .PHONY : template_class.o
@@ -278,6 +318,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... meta_template"
 	@echo "... template_class"
 	@echo "... class_template"
 	@echo "... function_template"
@@ -291,6 +332,9 @@ help:
 	@echo "... function_template.o"
 	@echo "... function_template.i"
 	@echo "... function_template.s"
+	@echo "... meta_template.o"
+	@echo "... meta_template.i"
+	@echo "... meta_template.s"
 	@echo "... template_class.o"
 	@echo "... template_class.i"
 	@echo "... template_class.s"

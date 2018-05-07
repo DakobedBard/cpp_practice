@@ -1,3 +1,6 @@
 /home/mddarr/aptitude/arrays/CMakeFiles/rebuild_cache.dir
 /home/mddarr/aptitude/arrays/CMakeFiles/edit_cache.dir
+/home/mddarr/aptitude/arrays/CMakeFiles/operations.dir
 /home/mddarr/aptitude/arrays/CMakeFiles/sizeof.dir
+/home/mddarr/aptitude/arrays/CMakeFiles/vectors.dir
+/home/mddarr/aptitude/arrays/CMakeFiles/Reverse.dir

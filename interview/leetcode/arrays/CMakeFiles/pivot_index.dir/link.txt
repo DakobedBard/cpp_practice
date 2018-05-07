@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/pivot_index.dir/pivot_index.cpp.o  -o pivot_index 

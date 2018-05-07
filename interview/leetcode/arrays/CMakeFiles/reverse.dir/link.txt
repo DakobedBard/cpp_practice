@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/reverse.dir/reverse.cpp.o  -o reverse 

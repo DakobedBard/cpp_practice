@@ -1,0 +1,3 @@
+/home/mddarr/aptitude/data_structures/stack/CMakeFiles/rebuild_cache.dir
+/home/mddarr/aptitude/data_structures/stack/CMakeFiles/edit_cache.dir
+/home/mddarr/aptitude/data_structures/stack/CMakeFiles/stack.dir

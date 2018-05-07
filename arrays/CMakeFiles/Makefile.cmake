@@ -43,5 +43,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/operations.dir/DependInfo.cmake"
   "CMakeFiles/sizeof.dir/DependInfo.cmake"
+  "CMakeFiles/vectors.dir/DependInfo.cmake"
+  "CMakeFiles/Reverse.dir/DependInfo.cmake"
   )
