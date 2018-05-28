@@ -1,0 +1,3 @@
+/home/mddarr/aptitude/templates/class_templates/CMakeFiles/rebuild_cache.dir
+/home/mddarr/aptitude/templates/class_templates/CMakeFiles/edit_cache.dir
+/home/mddarr/aptitude/templates/class_templates/CMakeFiles/array.dir

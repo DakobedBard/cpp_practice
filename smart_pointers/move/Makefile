@@ -111,19 +111,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named move_constructor
-
-# Build rule for target.
-move_constructor: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 move_constructor
-.PHONY : move_constructor
-
-# fast build rule for target.
-move_constructor/fast:
-	$(MAKE) -f CMakeFiles/move_constructor.dir/build.make CMakeFiles/move_constructor.dir/build
-.PHONY : move_constructor/fast
-
-#=============================================================================
 # Target rules for targets named Dynamic_Array_Test
 
 # Build rule for target.
@@ -148,6 +135,32 @@ Move_Dynamic_Array_Test: cmake_check_build_system
 Move_Dynamic_Array_Test/fast:
 	$(MAKE) -f CMakeFiles/Move_Dynamic_Array_Test.dir/build.make CMakeFiles/Move_Dynamic_Array_Test.dir/build
 .PHONY : Move_Dynamic_Array_Test/fast
+
+#=============================================================================
+# Target rules for targets named move_constructor
+
+# Build rule for target.
+move_constructor: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 move_constructor
+.PHONY : move_constructor
+
+# fast build rule for target.
+move_constructor/fast:
+	$(MAKE) -f CMakeFiles/move_constructor.dir/build.make CMakeFiles/move_constructor.dir/build
+.PHONY : move_constructor/fast
+
+#=============================================================================
+# Target rules for targets named std_move
+
+# Build rule for target.
+std_move: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_move
+.PHONY : std_move
+
+# fast build rule for target.
+std_move/fast:
+	$(MAKE) -f CMakeFiles/std_move.dir/build.make CMakeFiles/std_move.dir/build
+.PHONY : std_move/fast
 
 Dynamic_Array_Test.o: Dynamic_Array_Test.cpp.o
 
@@ -230,6 +243,33 @@ move_dynamic_array_test.cpp.s:
 	$(MAKE) -f CMakeFiles/Move_Dynamic_Array_Test.dir/build.make CMakeFiles/Move_Dynamic_Array_Test.dir/move_dynamic_array_test.cpp.s
 .PHONY : move_dynamic_array_test.cpp.s
 
+std_move.o: std_move.cpp.o
+
+.PHONY : std_move.o
+
+# target to build an object file
+std_move.cpp.o:
+	$(MAKE) -f CMakeFiles/std_move.dir/build.make CMakeFiles/std_move.dir/std_move.cpp.o
+.PHONY : std_move.cpp.o
+
+std_move.i: std_move.cpp.i
+
+.PHONY : std_move.i
+
+# target to preprocess a source file
+std_move.cpp.i:
+	$(MAKE) -f CMakeFiles/std_move.dir/build.make CMakeFiles/std_move.dir/std_move.cpp.i
+.PHONY : std_move.cpp.i
+
+std_move.s: std_move.cpp.s
+
+.PHONY : std_move.s
+
+# target to generate assembly for a file
+std_move.cpp.s:
+	$(MAKE) -f CMakeFiles/std_move.dir/build.make CMakeFiles/std_move.dir/std_move.cpp.s
+.PHONY : std_move.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -237,10 +277,11 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... move_constructor"
-	@echo "... Dynamic_Array_Test"
 	@echo "... edit_cache"
+	@echo "... Dynamic_Array_Test"
 	@echo "... Move_Dynamic_Array_Test"
+	@echo "... move_constructor"
+	@echo "... std_move"
 	@echo "... Dynamic_Array_Test.o"
 	@echo "... Dynamic_Array_Test.i"
 	@echo "... Dynamic_Array_Test.s"
@@ -250,6 +291,9 @@ help:
 	@echo "... move_dynamic_array_test.o"
 	@echo "... move_dynamic_array_test.i"
 	@echo "... move_dynamic_array_test.s"
+	@echo "... std_move.o"
+	@echo "... std_move.i"
+	@echo "... std_move.s"
 .PHONY : help
 
 

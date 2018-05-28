@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/array.dir/coloring.cpp.o  -o array 

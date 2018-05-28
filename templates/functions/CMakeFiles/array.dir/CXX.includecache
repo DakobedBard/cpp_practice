@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/mddarr/aptitude/templates/functions/array_test.cpp
+static_array.h
+/home/mddarr/aptitude/templates/functions/static_array.h
+
+/home/mddarr/aptitude/templates/functions/static_array.h
+iostream
+-
+

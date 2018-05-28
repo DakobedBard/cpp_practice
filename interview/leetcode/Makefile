@@ -111,44 +111,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named TwoSum
+# Target rules for targets named stack_queue
 
 # Build rule for target.
-TwoSum: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 TwoSum
-.PHONY : TwoSum
+stack_queue: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 stack_queue
+.PHONY : stack_queue
 
 # fast build rule for target.
-TwoSum/fast:
-	$(MAKE) -f CMakeFiles/TwoSum.dir/build.make CMakeFiles/TwoSum.dir/build
-.PHONY : TwoSum/fast
+stack_queue/fast:
+	$(MAKE) -f CMakeFiles/stack_queue.dir/build.make CMakeFiles/stack_queue.dir/build
+.PHONY : stack_queue/fast
 
-TwoSum.o: TwoSum.cpp.o
+stack_queue.o: stack_queue.cpp.o
 
-.PHONY : TwoSum.o
+.PHONY : stack_queue.o
 
 # target to build an object file
-TwoSum.cpp.o:
-	$(MAKE) -f CMakeFiles/TwoSum.dir/build.make CMakeFiles/TwoSum.dir/TwoSum.cpp.o
-.PHONY : TwoSum.cpp.o
+stack_queue.cpp.o:
+	$(MAKE) -f CMakeFiles/stack_queue.dir/build.make CMakeFiles/stack_queue.dir/stack_queue.cpp.o
+.PHONY : stack_queue.cpp.o
 
-TwoSum.i: TwoSum.cpp.i
+stack_queue.i: stack_queue.cpp.i
 
-.PHONY : TwoSum.i
+.PHONY : stack_queue.i
 
 # target to preprocess a source file
-TwoSum.cpp.i:
-	$(MAKE) -f CMakeFiles/TwoSum.dir/build.make CMakeFiles/TwoSum.dir/TwoSum.cpp.i
-.PHONY : TwoSum.cpp.i
+stack_queue.cpp.i:
+	$(MAKE) -f CMakeFiles/stack_queue.dir/build.make CMakeFiles/stack_queue.dir/stack_queue.cpp.i
+.PHONY : stack_queue.cpp.i
 
-TwoSum.s: TwoSum.cpp.s
+stack_queue.s: stack_queue.cpp.s
 
-.PHONY : TwoSum.s
+.PHONY : stack_queue.s
 
 # target to generate assembly for a file
-TwoSum.cpp.s:
-	$(MAKE) -f CMakeFiles/TwoSum.dir/build.make CMakeFiles/TwoSum.dir/TwoSum.cpp.s
-.PHONY : TwoSum.cpp.s
+stack_queue.cpp.s:
+	$(MAKE) -f CMakeFiles/stack_queue.dir/build.make CMakeFiles/stack_queue.dir/stack_queue.cpp.s
+.PHONY : stack_queue.cpp.s
 
 # Help Target
 help:
@@ -158,10 +158,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... TwoSum"
-	@echo "... TwoSum.o"
-	@echo "... TwoSum.i"
-	@echo "... TwoSum.s"
+	@echo "... stack_queue"
+	@echo "... stack_queue.o"
+	@echo "... stack_queue.i"
+	@echo "... stack_queue.s"
 .PHONY : help
 
 

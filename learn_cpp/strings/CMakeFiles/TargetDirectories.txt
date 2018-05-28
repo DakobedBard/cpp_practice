@@ -1,0 +1,3 @@
+/home/mddarr/aptitude/learn_cpp/strings/CMakeFiles/rebuild_cache.dir
+/home/mddarr/aptitude/learn_cpp/strings/CMakeFiles/edit_cache.dir
+/home/mddarr/aptitude/learn_cpp/strings/CMakeFiles/string_access.dir

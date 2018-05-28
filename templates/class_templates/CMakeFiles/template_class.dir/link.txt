@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/template_class.dir/array_main.cpp.o  -o template_class 

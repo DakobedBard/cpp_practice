@@ -7,10 +7,10 @@ cmake_minimum_required(VERSION 2.8)
 
 
 
-set(TwoSum TwoSum.cpp )
-add_executable(TwoSum ${TwoSum} )
+#set(TwoSum TwoSum.cpp )
+#add_executable(TwoSum ${TwoSum} )
 
-set(two_pointers two_pointers.cpp )
-add_executable(two_pointers ${two_pointers} )
+set(stack_queue stack_queue.cpp )
+add_executable(stack_queue ${stack_queue} )
 
 

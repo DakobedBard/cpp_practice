@@ -1,0 +1,3 @@
+/home/mddarr/aptitude/conversions/CMakeFiles/rebuild_cache.dir
+/home/mddarr/aptitude/conversions/CMakeFiles/edit_cache.dir
+/home/mddarr/aptitude/conversions/CMakeFiles/fraction.dir

@@ -1,5 +1,6 @@
 /home/mddarr/aptitude/smart_pointers/move/CMakeFiles/rebuild_cache.dir
-/home/mddarr/aptitude/smart_pointers/move/CMakeFiles/move_constructor.dir
-/home/mddarr/aptitude/smart_pointers/move/CMakeFiles/Dynamic_Array_Test.dir
 /home/mddarr/aptitude/smart_pointers/move/CMakeFiles/edit_cache.dir
+/home/mddarr/aptitude/smart_pointers/move/CMakeFiles/Dynamic_Array_Test.dir
 /home/mddarr/aptitude/smart_pointers/move/CMakeFiles/Move_Dynamic_Array_Test.dir
+/home/mddarr/aptitude/smart_pointers/move/CMakeFiles/move_constructor.dir
+/home/mddarr/aptitude/smart_pointers/move/CMakeFiles/std_move.dir

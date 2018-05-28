@@ -23,12 +23,15 @@ For each node, check if max value in left subtree is smaller than the node and m
 #include <stdlib.h>
 #include <stdbool.h>
 #include <limits.h>
-
-
+#include <iostream>
+#include <queue>
 struct node{
 	int key;
 	struct node *left;
 	struct node *right;
+	int height;
+
+
 };
 
 /* A utility function to create a new BST node*/
@@ -36,8 +39,10 @@ struct node{
 struct node *newNode(int item)
 {
 	struct node *temp = (struct node *) malloc(sizeof(struct node));
+	
 	temp->key = item;
 	temp->left = temp->right =NULL;
+
 	return temp;
 }
 
@@ -344,7 +349,7 @@ struct node* sortedarray_toBST(int arr[], int start, int end){
 
 	int mid = (start + end)/2;
 	struct node *root = newNode(arr[mid]);
-	printf("the middle of the array is...%d\n",arr[mid]); 
+	
 
 	root->left = sortedarray_toBST(arr, start, mid-1);
 	root->right = sortedarray_toBST(arr,mid+1, end);
@@ -500,22 +505,24 @@ int *merge(int arr1[], int arr2[], int m, int n)
 
 
 
-// A helper function that stores inorder traversal of a tree rooted with node
-void storeInorder(struct node* node, int inorder[], int *index_ptr)
+/* A helper function that stores inorder traversal of a tree rooted with node
+/(void storeInorder(struct node* node, int inorder[], int *index_ptr)
 {
     if (node == NULL)
         return;
  
     /* first recur on left child */
-    storeInorder(node->left, inorder, index_ptr);
+  /*  storeInorder(node->left, inorder, index_ptr);
  
     inorder[*index_ptr] = node->data;
     (*index_ptr)++;  // increase index for next entry
  
-    /* now recur on right child */
+    /* now recur on right child 
     storeInorder(node->right, inorder, index_ptr);
 }
  
+*/
+
 /* A function that constructs Balanced Binary Search Tree from a sorted array
    See https://www.geeksforgeeks.org/archives/17138 */
 struct node* sortedArrayToBST(int arr[], int start, int end)
@@ -527,7 +534,7 @@ struct node* sortedArrayToBST(int arr[], int start, int end)
     /* Get the middle element and make it root */
     int mid = (start + end)/2;
     struct node *root = newNode(arr[mid]);
- 
+ 	//root->key
     /* Recursively construct the left subtree and make it
        left child of root */
     root->left =  sortedArrayToBST(arr, start, mid-1);
@@ -539,9 +546,276 @@ struct node* sortedArrayToBST(int arr[], int start, int end)
     return root;
 }
 
+int findLevel(struct node *root, int k, int level){
+
+	// Base case
+
+	if(root == NULL)
+		return -1;
+
+
+	if(root->key == k)
+		return level;
+	int l = findLevel(root->left, k, level+1);
+	//return 0;
+	return (l != -1)? l : findLevel(root->right, k, level+1);
+
+
+}
+/*
+
+This function returns a pointer to the LCA of two given values n1 and n2.  It also sets d1, d2 and dist if one key is not ancestor of other
+
+d1 to store distance of n1 from root
+d2 to store distance of n2 from root
+
+level (distance from root) of current node
+
+dist-> to store the distance between n1 and n2
 
 
 
+*/
+
+/*
+struct node* findDistUtil(struct node* root, int n1, int n2, int &d1, int &d2, int &dist, int lvl){
+
+	if(root == NULL)
+		return NULL;
+	if(root->key == n1){
+		d1 = lvl;
+		return root;
+	}
+
+	if(root->key ==n2){
+		d2 = lvl;	
+		return root;
+	}
+
+
+	// Look for n1 and n2 in left and right subtrees
+	
+	struct node *left_lca = findDistUtil(root->left, n1, n2,d1,d2,dist,lvl+1);
+	struct node *right_lca = findDistUtil(root->right, n1, n2,d1,d2,dist,lvl+1);
+
+	// If both of the above calls return Non NULL, then one key is present in one subtree and other is 
+	// present in the other.  SO this node is the LCA
+
+	if(left_lca && right_lca){
+		dist = d1+d2 - 2*lvl;
+		return root;
+	}
+
+	// Otherwise check if left subtree is 
+
+	return(left_lca != NULL) ? left_lca:right_lca;
+
+}
+
+*/
+
+struct node *findDistUtil(struct node* root, int n1, int n2, int &d1, 
+                            int &d2, int &dist, int lvl)
+{
+    // Base case
+    if (root == NULL) return NULL;
+ 
+    // If either n1 or n2 matches with root's key, report
+    // the presence by returning root (Note that if a key is
+    // ancestor of other, then the ancestor key becomes LCA
+    if (root->key == n1)
+    {
+         d1 = lvl;
+         return root;
+    }
+    if (root->key == n2)
+    {
+         d2 = lvl;
+         return root;
+    }
+ 
+    // Look for n1 and n2 in left and right subtrees
+    struct node *left_lca  = findDistUtil(root->left, n1, n2, 
+                                   d1, d2, dist, lvl+1);
+    struct node *right_lca = findDistUtil(root->right, n1, n2,
+                                   d1, d2, dist, lvl+1);
+ 
+    // If both of the above calls return Non-NULL, then
+    // one key is present in once subtree and other is 
+    // present in other. So this node is the LCA
+    if (left_lca && right_lca)
+    {
+        dist = d1 + d2 - 2*lvl;
+        return root;
+    }
+ 
+    // Otherwise check if left subtree or right subtree 
+    // is LCA
+    return (left_lca != NULL)? left_lca: right_lca;
+}
+
+
+
+int findDistance2(struct node* root, int n1, int n2){
+
+	int d1 = -1;
+	int d2 = -1;
+	int dist;
+
+
+	struct node* lca = findDistUtil(root, n1, n2, d1, d2, dist, 1);
+	// If both n1 and n2 were present in binary tree, return dist
+
+	if(d1 != -1 && d2 != -1)
+		return dist;
+	
+
+	if(d1 != -1){
+		dist = findLevel(lca, n2,0);
+	}
+
+	if(d2!= -1 ) {
+		dist = findLevel(lca, n1, 0);
+		return dist;
+	}
+	return -1;
+	
+	
+
+}
+
+
+int findDistance(struct node *root, int n1, int n2)
+{
+   	int d1 =-1, d2 = -1, dist;
+	struct node* lca = findDistUtil(root, n1, n2, d1,d2, dist,1);
+	
+ 	// If both n1 and n2 were present in Binary Tree return dist
+
+	if(d1!= -1 && d2 != -1){
+		return dist;
+	}
+
+	if (d1 != -1)
+    	{
+        	dist = findLevel(lca, n2, 0);
+        	return dist;
+    	}
+ 
+    	// If n2 is ancestor of n1, consider n2 as root 
+    	// and find level of n1 in subtree rooted with n2
+    	if (d2 != -1)
+    	{
+        	dist = findLevel(lca, n1, 0);
+        	return dist;
+    	}
+    	return -1;
+}
+
+
+
+
+/*
+
+Here I am implementing BFS with a queue.. At the minimum height, the node will have 0 children on its left and right.  Therefore by applying a breadth first search, the first node with null left and right pointers will be at the minimum depth.  Return this value.    
+
+
+
+
+*/
+
+
+
+int minDepth(struct node* root){
+	if(root == NULL)
+		return 0;
+
+
+
+	std::queue<struct node*> q;
+
+
+	struct node* current_node = root;
+
+	//std::cout << "the value of the node of the queyue" << current_node->key << std::endl;
+	q.push(current_node);
+	int depth =0;
+	while(!q.empty()){
+
+		depth ++;
+		int size = q.size();
+
+		while(size){
+			current_node = q.front();
+			if(current_node->left != NULL){
+				q.push(current_node->left);
+				std::cout << "I'm getting pushed: " << current_node->key << "and the depth" << depth << std::endl;
+				
+
+			}
+			if(current_node->left != NULL){
+				q.push(current_node->left);
+				std::cout << "I'm getting pushed: " << current_node->key << std::endl;
+			}
+			if(current_node->left == NULL and current_node->right == NULL){	
+				std::cout << "My children are null..: " << current_node->key << std::endl;
+				return depth;
+			}
+
+
+		//	std::cout << "The maximum value of this node is " << current_node->key << std::endl;
+			q.pop();
+			size--;
+		}
+
+	}
+
+
+	/*//while(!q.empty()){
+
+		depth++;
+		int size = q.size();
+//		std::cout << "the size of the queyue" << size << std::endl;
+		
+	/*	while(size){
+
+			struct node* current_node = q.front();
+//			std::cout << "the value of the node of the queyue" << current_node->key << std::endl;
+		
+			//if(current_node->left = NULL)
+//				std::cout << "The Left value of this node is NULL " << current_node->key << std::endl;
+			//else{
+
+//				std::cout<< "not " <<std::endl; 
+			//}
+
+			//std::cout << "The maximum value of this node is " << current_node->key << std::endl;
+			q.pop();
+			size--;
+
+				int size = q.size();
+		//std::cout << "the size of the queyue" << size << std::endl;
+
+	}
+	*/	
+
+	
+	return 0;
+
+
+}
+
+
+
+	/*		std::cout << "the value of the current node" << current_node->key << std::endl;
+			if(current_node->left != NULL){
+				q.push(current_node->left);
+			}
+			if(current_node->right)
+				q.push(current_node->right);
+			if(current_node->left == NULL && current_node->right == NULL)
+				return depth;
+*/
 
 
 int main()
@@ -562,13 +836,57 @@ int main()
     	root = insert(root, 80);
  
 
-   	struct node *max = maxValueNode(root);
+	int first_level = findLevel(root, 30,0);
+	std::cout << "first level: " << first_level <<std::endl;
 
-	printf("the maximum value of this node is.. %d\n", max->key  ) ;
+   	//struct node *max = maxValueNode(root);
 
-	test_array_toBST();
 
-	printf("\n");
+//	std::cout << "The maximum value of this node is " << max->key << std::endl;
+//	test_array_toBST();
+
+//	printf("\n");
+
+	std::cout << "\n";
+
+	std::cout << "Dist(20, 80) = " << findDistance(root, 20, 80);
+
+	std::cout << "\n";
+
+
+	struct node* root2 = NULL;
+	root2 = newNode( 1);
+	root2->left = newNode(2);
+    root2->right = newNode(3);
+    root2->left->left = newNode(4);
+    root2->left->right = newNode(5);
+    root2->right->left = newNode(6);
+    root2->right->right = newNode(7);
+    root2->right->left->right = newNode(8);
+
+	preorder(root2);
+
+	std::cout << "Dist(4, 5) = " << findDistance(root2, 4,5) << std::endl;
+	std::cout << "Dist(4, 6) = " << findDistance(root2, 4,6)<< std::endl;
+	std::cout << "Dist(3, 4) = " << findDistance(root2, 3,4)<< std::endl;
+	std::cout << "Dist(2, 4) = " << findDistance(root2, 2,4)<< std::endl;
+	std::cout << "\n";
+	//root = insert(root, 2);
+	//root = insert(root, 3);
+	//root = insert(root, 4);
+	//root = insert(root, 5);
+	
+
+	//int n = (int)root->key;
+	//std::cout << "the key of the root is" <<max->key << std::endl;
+	//int mindepth = minDepth(root);
+
+	
+
+
+	//std::cout << "the value of the node of the queyue" << root->key << std::endl;
+
+	//std::cout << "the min depth is " << mindepth<<std::endl;
 
  /*   printf("Inorder traversal of the given tree \n");
     inorder(root);

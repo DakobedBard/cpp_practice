@@ -60,43 +60,6 @@ CMAKE_SOURCE_DIR = /home/mddarr/aptitude/smart_pointers/move
 CMAKE_BINARY_DIR = /home/mddarr/aptitude/smart_pointers/move
 
 #=============================================================================
-# Target rules for target CMakeFiles/move_constructor.dir
-
-# All Build rule for target.
-CMakeFiles/move_constructor.dir/all:
-	$(MAKE) -f CMakeFiles/move_constructor.dir/build.make CMakeFiles/move_constructor.dir/depend
-	$(MAKE) -f CMakeFiles/move_constructor.dir/build.make CMakeFiles/move_constructor.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mddarr/aptitude/smart_pointers/move/CMakeFiles --progress-num=5,6 "Built target move_constructor"
-.PHONY : CMakeFiles/move_constructor.dir/all
-
-# Include target in all.
-all: CMakeFiles/move_constructor.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/move_constructor.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mddarr/aptitude/smart_pointers/move/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/move_constructor.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mddarr/aptitude/smart_pointers/move/CMakeFiles 0
-.PHONY : CMakeFiles/move_constructor.dir/rule
-
-# Convenience name for target.
-move_constructor: CMakeFiles/move_constructor.dir/rule
-
-.PHONY : move_constructor
-
-# clean rule for target.
-CMakeFiles/move_constructor.dir/clean:
-	$(MAKE) -f CMakeFiles/move_constructor.dir/build.make CMakeFiles/move_constructor.dir/clean
-.PHONY : CMakeFiles/move_constructor.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/move_constructor.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
 # Target rules for target CMakeFiles/Dynamic_Array_Test.dir
 
 # All Build rule for target.
@@ -167,6 +130,80 @@ CMakeFiles/Move_Dynamic_Array_Test.dir/clean:
 
 # clean rule for target.
 clean: CMakeFiles/Move_Dynamic_Array_Test.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/move_constructor.dir
+
+# All Build rule for target.
+CMakeFiles/move_constructor.dir/all:
+	$(MAKE) -f CMakeFiles/move_constructor.dir/build.make CMakeFiles/move_constructor.dir/depend
+	$(MAKE) -f CMakeFiles/move_constructor.dir/build.make CMakeFiles/move_constructor.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mddarr/aptitude/smart_pointers/move/CMakeFiles --progress-num=5,6 "Built target move_constructor"
+.PHONY : CMakeFiles/move_constructor.dir/all
+
+# Include target in all.
+all: CMakeFiles/move_constructor.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/move_constructor.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mddarr/aptitude/smart_pointers/move/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/move_constructor.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mddarr/aptitude/smart_pointers/move/CMakeFiles 0
+.PHONY : CMakeFiles/move_constructor.dir/rule
+
+# Convenience name for target.
+move_constructor: CMakeFiles/move_constructor.dir/rule
+
+.PHONY : move_constructor
+
+# clean rule for target.
+CMakeFiles/move_constructor.dir/clean:
+	$(MAKE) -f CMakeFiles/move_constructor.dir/build.make CMakeFiles/move_constructor.dir/clean
+.PHONY : CMakeFiles/move_constructor.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/move_constructor.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/std_move.dir
+
+# All Build rule for target.
+CMakeFiles/std_move.dir/all:
+	$(MAKE) -f CMakeFiles/std_move.dir/build.make CMakeFiles/std_move.dir/depend
+	$(MAKE) -f CMakeFiles/std_move.dir/build.make CMakeFiles/std_move.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mddarr/aptitude/smart_pointers/move/CMakeFiles --progress-num=7,8 "Built target std_move"
+.PHONY : CMakeFiles/std_move.dir/all
+
+# Include target in all.
+all: CMakeFiles/std_move.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/std_move.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mddarr/aptitude/smart_pointers/move/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/std_move.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mddarr/aptitude/smart_pointers/move/CMakeFiles 0
+.PHONY : CMakeFiles/std_move.dir/rule
+
+# Convenience name for target.
+std_move: CMakeFiles/std_move.dir/rule
+
+.PHONY : std_move
+
+# clean rule for target.
+CMakeFiles/std_move.dir/clean:
+	$(MAKE) -f CMakeFiles/std_move.dir/build.make CMakeFiles/std_move.dir/clean
+.PHONY : CMakeFiles/std_move.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/std_move.dir/clean
 
 .PHONY : clean
 

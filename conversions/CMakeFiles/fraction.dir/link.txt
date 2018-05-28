@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/fraction.dir/Fraction.cpp.o  -o fraction 

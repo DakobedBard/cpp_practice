@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/mddarr/aptitude/templates/class_templates/array.cpp
+template_class.h
+/home/mddarr/aptitude/templates/class_templates/template_class.h
+
+/home/mddarr/aptitude/templates/class_templates/array.h
+assert.h
+-
+
+/home/mddarr/aptitude/templates/class_templates/array_main.cpp
+template_class.h
+/home/mddarr/aptitude/templates/class_templates/template_class.h
+iostream
+-
+
+/home/mddarr/aptitude/templates/class_templates/template_class.h
+assert.h
+-
+
+/home/mddarr/aptitude/templates/class_templates/templates.cpp
+array.h
+/home/mddarr/aptitude/templates/class_templates/array.h
+array.cpp
+/home/mddarr/aptitude/templates/class_templates/array.cpp
+

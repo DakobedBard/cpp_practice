@@ -1,0 +1,3 @@
+/home/mddarr/aptitude/graphs/kruskall/CMakeFiles/rebuild_cache.dir
+/home/mddarr/aptitude/graphs/kruskall/CMakeFiles/edit_cache.dir
+/home/mddarr/aptitude/graphs/kruskall/CMakeFiles/krusakall.dir

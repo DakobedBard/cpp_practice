@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/paranthesis_operator.dir/paranthesis_operator.cpp.o  -o paranthesis_operator 

@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/unique_pointers.dir/unique_pointers.cpp.o  -o unique_pointers 

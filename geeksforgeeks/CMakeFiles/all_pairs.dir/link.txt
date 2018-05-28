@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/all_pairs.dir/all_pairs.cpp.o  -o all_pairs 
