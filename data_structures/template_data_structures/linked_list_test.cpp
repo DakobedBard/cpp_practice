@@ -34,5 +34,11 @@ int main(){
 	vector_of_lists.push_back(ll2);
 	vector_of_lists.push_back(ll3);
 	LinkedList<int> merged_k_list =  mergeKLists(vector_of_lists);
-	//merged_list.print();
+	merged_k_list.print();
+
+	
+	LinkedList<int> cyclic_list(new Node<int>(2));
+
+	
+
 }

@@ -43,6 +43,11 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/linked_list.dir/DependInfo.cmake"
+  "CMakeFiles/adj_matrix.dir/DependInfo.cmake"
   "CMakeFiles/binary_tree.dir/DependInfo.cmake"
+  "CMakeFiles/linked_list.dir/DependInfo.cmake"
+  "CMakeFiles/adj_list.dir/DependInfo.cmake"
+  "CMakeFiles/graph.dir/DependInfo.cmake"
+  "CMakeFiles/prim.dir/DependInfo.cmake"
+  "CMakeFiles/heap.dir/DependInfo.cmake"
   )

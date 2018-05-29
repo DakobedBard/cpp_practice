@@ -30,6 +30,7 @@ public:
     LinkedList& operator=(LinkedList byValList);
     LinkedList(): head(NULL), tail(NULL) {}
     LinkedList(Node<T> * newNode) : head(newNode), tail(newNode) {}
+    LinkedList():head(NULL), tail(NULL){}
     ~LinkedList();
 
     static LinkedList<int> sumLists(const LinkedList<int>& LL1, LinkedList<int>& LL2);

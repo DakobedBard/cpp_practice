@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/mddarr/aptitude/data_structures/template_data_structure
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
@@ -77,6 +66,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named linked_list
+# Target rules for targets named adj_matrix
 
 # Build rule for target.
-linked_list: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 linked_list
-.PHONY : linked_list
+adj_matrix: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 adj_matrix
+.PHONY : adj_matrix
 
 # fast build rule for target.
-linked_list/fast:
-	$(MAKE) -f CMakeFiles/linked_list.dir/build.make CMakeFiles/linked_list.dir/build
-.PHONY : linked_list/fast
+adj_matrix/fast:
+	$(MAKE) -f CMakeFiles/adj_matrix.dir/build.make CMakeFiles/adj_matrix.dir/build
+.PHONY : adj_matrix/fast
 
 #=============================================================================
 # Target rules for targets named binary_tree
@@ -135,6 +135,125 @@ binary_tree: cmake_check_build_system
 binary_tree/fast:
 	$(MAKE) -f CMakeFiles/binary_tree.dir/build.make CMakeFiles/binary_tree.dir/build
 .PHONY : binary_tree/fast
+
+#=============================================================================
+# Target rules for targets named linked_list
+
+# Build rule for target.
+linked_list: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 linked_list
+.PHONY : linked_list
+
+# fast build rule for target.
+linked_list/fast:
+	$(MAKE) -f CMakeFiles/linked_list.dir/build.make CMakeFiles/linked_list.dir/build
+.PHONY : linked_list/fast
+
+#=============================================================================
+# Target rules for targets named adj_list
+
+# Build rule for target.
+adj_list: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 adj_list
+.PHONY : adj_list
+
+# fast build rule for target.
+adj_list/fast:
+	$(MAKE) -f CMakeFiles/adj_list.dir/build.make CMakeFiles/adj_list.dir/build
+.PHONY : adj_list/fast
+
+#=============================================================================
+# Target rules for targets named graph
+
+# Build rule for target.
+graph: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 graph
+.PHONY : graph
+
+# fast build rule for target.
+graph/fast:
+	$(MAKE) -f CMakeFiles/graph.dir/build.make CMakeFiles/graph.dir/build
+.PHONY : graph/fast
+
+#=============================================================================
+# Target rules for targets named prim
+
+# Build rule for target.
+prim: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 prim
+.PHONY : prim
+
+# fast build rule for target.
+prim/fast:
+	$(MAKE) -f CMakeFiles/prim.dir/build.make CMakeFiles/prim.dir/build
+.PHONY : prim/fast
+
+#=============================================================================
+# Target rules for targets named heap
+
+# Build rule for target.
+heap: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 heap
+.PHONY : heap
+
+# fast build rule for target.
+heap/fast:
+	$(MAKE) -f CMakeFiles/heap.dir/build.make CMakeFiles/heap.dir/build
+.PHONY : heap/fast
+
+adj_list_test.o: adj_list_test.cpp.o
+
+.PHONY : adj_list_test.o
+
+# target to build an object file
+adj_list_test.cpp.o:
+	$(MAKE) -f CMakeFiles/adj_list.dir/build.make CMakeFiles/adj_list.dir/adj_list_test.cpp.o
+.PHONY : adj_list_test.cpp.o
+
+adj_list_test.i: adj_list_test.cpp.i
+
+.PHONY : adj_list_test.i
+
+# target to preprocess a source file
+adj_list_test.cpp.i:
+	$(MAKE) -f CMakeFiles/adj_list.dir/build.make CMakeFiles/adj_list.dir/adj_list_test.cpp.i
+.PHONY : adj_list_test.cpp.i
+
+adj_list_test.s: adj_list_test.cpp.s
+
+.PHONY : adj_list_test.s
+
+# target to generate assembly for a file
+adj_list_test.cpp.s:
+	$(MAKE) -f CMakeFiles/adj_list.dir/build.make CMakeFiles/adj_list.dir/adj_list_test.cpp.s
+.PHONY : adj_list_test.cpp.s
+
+adj_matrix_test.o: adj_matrix_test.cpp.o
+
+.PHONY : adj_matrix_test.o
+
+# target to build an object file
+adj_matrix_test.cpp.o:
+	$(MAKE) -f CMakeFiles/adj_matrix.dir/build.make CMakeFiles/adj_matrix.dir/adj_matrix_test.cpp.o
+.PHONY : adj_matrix_test.cpp.o
+
+adj_matrix_test.i: adj_matrix_test.cpp.i
+
+.PHONY : adj_matrix_test.i
+
+# target to preprocess a source file
+adj_matrix_test.cpp.i:
+	$(MAKE) -f CMakeFiles/adj_matrix.dir/build.make CMakeFiles/adj_matrix.dir/adj_matrix_test.cpp.i
+.PHONY : adj_matrix_test.cpp.i
+
+adj_matrix_test.s: adj_matrix_test.cpp.s
+
+.PHONY : adj_matrix_test.s
+
+# target to generate assembly for a file
+adj_matrix_test.cpp.s:
+	$(MAKE) -f CMakeFiles/adj_matrix.dir/build.make CMakeFiles/adj_matrix.dir/adj_matrix_test.cpp.s
+.PHONY : adj_matrix_test.cpp.s
 
 binary_tree_test.o: binary_tree_test.cpp.o
 
@@ -163,6 +282,60 @@ binary_tree_test.cpp.s:
 	$(MAKE) -f CMakeFiles/binary_tree.dir/build.make CMakeFiles/binary_tree.dir/binary_tree_test.cpp.s
 .PHONY : binary_tree_test.cpp.s
 
+graph_test.o: graph_test.cpp.o
+
+.PHONY : graph_test.o
+
+# target to build an object file
+graph_test.cpp.o:
+	$(MAKE) -f CMakeFiles/graph.dir/build.make CMakeFiles/graph.dir/graph_test.cpp.o
+.PHONY : graph_test.cpp.o
+
+graph_test.i: graph_test.cpp.i
+
+.PHONY : graph_test.i
+
+# target to preprocess a source file
+graph_test.cpp.i:
+	$(MAKE) -f CMakeFiles/graph.dir/build.make CMakeFiles/graph.dir/graph_test.cpp.i
+.PHONY : graph_test.cpp.i
+
+graph_test.s: graph_test.cpp.s
+
+.PHONY : graph_test.s
+
+# target to generate assembly for a file
+graph_test.cpp.s:
+	$(MAKE) -f CMakeFiles/graph.dir/build.make CMakeFiles/graph.dir/graph_test.cpp.s
+.PHONY : graph_test.cpp.s
+
+heap_test.o: heap_test.cpp.o
+
+.PHONY : heap_test.o
+
+# target to build an object file
+heap_test.cpp.o:
+	$(MAKE) -f CMakeFiles/heap.dir/build.make CMakeFiles/heap.dir/heap_test.cpp.o
+.PHONY : heap_test.cpp.o
+
+heap_test.i: heap_test.cpp.i
+
+.PHONY : heap_test.i
+
+# target to preprocess a source file
+heap_test.cpp.i:
+	$(MAKE) -f CMakeFiles/heap.dir/build.make CMakeFiles/heap.dir/heap_test.cpp.i
+.PHONY : heap_test.cpp.i
+
+heap_test.s: heap_test.cpp.s
+
+.PHONY : heap_test.s
+
+# target to generate assembly for a file
+heap_test.cpp.s:
+	$(MAKE) -f CMakeFiles/heap.dir/build.make CMakeFiles/heap.dir/heap_test.cpp.s
+.PHONY : heap_test.cpp.s
+
 linked_list_test.o: linked_list_test.cpp.o
 
 .PHONY : linked_list_test.o
@@ -190,22 +363,69 @@ linked_list_test.cpp.s:
 	$(MAKE) -f CMakeFiles/linked_list.dir/build.make CMakeFiles/linked_list.dir/linked_list_test.cpp.s
 .PHONY : linked_list_test.cpp.s
 
+prim.o: prim.cpp.o
+
+.PHONY : prim.o
+
+# target to build an object file
+prim.cpp.o:
+	$(MAKE) -f CMakeFiles/prim.dir/build.make CMakeFiles/prim.dir/prim.cpp.o
+.PHONY : prim.cpp.o
+
+prim.i: prim.cpp.i
+
+.PHONY : prim.i
+
+# target to preprocess a source file
+prim.cpp.i:
+	$(MAKE) -f CMakeFiles/prim.dir/build.make CMakeFiles/prim.dir/prim.cpp.i
+.PHONY : prim.cpp.i
+
+prim.s: prim.cpp.s
+
+.PHONY : prim.s
+
+# target to generate assembly for a file
+prim.cpp.s:
+	$(MAKE) -f CMakeFiles/prim.dir/build.make CMakeFiles/prim.dir/prim.cpp.s
+.PHONY : prim.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... linked_list"
+	@echo "... adj_matrix"
 	@echo "... binary_tree"
+	@echo "... linked_list"
+	@echo "... adj_list"
+	@echo "... graph"
+	@echo "... rebuild_cache"
+	@echo "... prim"
+	@echo "... heap"
+	@echo "... adj_list_test.o"
+	@echo "... adj_list_test.i"
+	@echo "... adj_list_test.s"
+	@echo "... adj_matrix_test.o"
+	@echo "... adj_matrix_test.i"
+	@echo "... adj_matrix_test.s"
 	@echo "... binary_tree_test.o"
 	@echo "... binary_tree_test.i"
 	@echo "... binary_tree_test.s"
+	@echo "... graph_test.o"
+	@echo "... graph_test.i"
+	@echo "... graph_test.s"
+	@echo "... heap_test.o"
+	@echo "... heap_test.i"
+	@echo "... heap_test.s"
 	@echo "... linked_list_test.o"
 	@echo "... linked_list_test.i"
 	@echo "... linked_list_test.s"
+	@echo "... prim.o"
+	@echo "... prim.i"
+	@echo "... prim.s"
 .PHONY : help
 
 

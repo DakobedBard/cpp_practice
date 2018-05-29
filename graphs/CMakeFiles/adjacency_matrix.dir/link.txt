@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/adjacency_matrix.dir/adjacency_matrix.cpp.o  -o adjacency_matrix 

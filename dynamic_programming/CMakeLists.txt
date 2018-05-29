@@ -13,4 +13,6 @@ cmake_minimum_required(VERSION 2.8)
 set(chain_multiplication chain_multiplication.cpp )
 add_executable(chain_multiplication ${chain_multiplication} )
 
+set(longest_common_subsequence longest_common_subsequence.cpp )
+add_executable(longest_common_subsequence ${longest_common_subsequence} )
 

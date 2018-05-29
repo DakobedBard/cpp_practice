@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/mddarr/aptitude/graphs/union_find
+
+/home/mddarr/aptitude/graphs/union_find.cpp
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+iostream
+-
+union_find
+/home/mddarr/aptitude/graphs/union_find
+

@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/mddarr/aptitude/graphs/disjoint_set/union_find.h
+iostream
+-
+vector
+-
+unordered_map
+-
+
+/home/mddarr/aptitude/graphs/disjoint_set/union_find_test.cpp
+union_find.h
+/home/mddarr/aptitude/graphs/disjoint_set/union_find.h
+

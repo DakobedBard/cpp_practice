@@ -19,11 +19,12 @@ class LinkedList{
 	Node<DataType> *head;
 	Node<DataType> *tail;
 	LinkedList(Node<DataType> * newNode):head(newNode), tail(newNode){}
-	
+	 LinkedList():head(NULL), tail(NULL){}
 	void print();
 	int InsertTail(DataType val);
 	int InsertHead(DataType val);
 	int size;	
+
 };
 
 
@@ -62,9 +63,18 @@ int LinkedList<DataType>::InsertHead(DataType data){
 }
 
 
+/*
+
+This is adding a 1 to the begnninning of the merged linked_list.... pretty ugly..
+
+
+*/
+
+
 template <class DataType>
 LinkedList<DataType> mergeTwoLists(LinkedList<DataType>* firstlist, LinkedList<DataType>* secondlist){
 	LinkedList<DataType> merged_list(new Node<DataType>(1));
+	//LinkedList<DataType> merged_list();
 	Node<DataType>* tail1 = firstlist->head;
 	Node<DataType>* tail2 = secondlist->head;
 
@@ -105,16 +115,29 @@ LinkedList<DataType> mergeKLists(std::vector<LinkedList<DataType>> list_array){
 
 	std::cout << "The length of the vector is " << list_array.size() << std::endl;
 
-	while(lists.size() >1){
-
+	while(list_array.size() >1){
+		list_array.push_back(mergeTwoLists(&list_array[0],&list_array[1]));
+		list_array.erase(list_array.begin());
+		list_array.erase(list_array.begin());
 
 	}
-
+	merged_list = list_array.front();
 	return merged_list;
 
 }
 
 
+template <class DataType>
+bool detectCycle_Hash(LinkedList<DataType>* list){
+
+	return false;
+}
+
+template <class DataType>
+bool detectCycle_TwoPointers(LinkedList<DataType>* list){
+
+	return false;
+}
 
 
 
