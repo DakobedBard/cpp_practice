@@ -18,31 +18,84 @@ Do BFS and DFS on each of the implementations... write code to transition from o
 */
 
 
+#ifndef _GRAPH_H_
+#define _GRAPH_H_
+
 #include <iostream>
 #include <vector>
 #include <unordered_map>
 #include <list>
-
+#include <stack>
 
 #define adj_V 5
 
 struct Edge{
 
-	int src, dest;
+	int src, dest ,weight;
 	Edge* edge;
 
-	Edge():src(0),dest(0){}
+	Edge():src(0),dest(0),weight(0){}
+	Edge(int s, int d, int w):src(s), dest(d), weight(w){}
+	
+	friend std::ostream & operator << (std::ostream &out, const Edge &h);
+	
 
 };
 
 
+std::ostream & operator << (std::ostream &out, const Edge &h)
+{
+    	out << "The edge between " << h.src << " and " << h.dest << "with a weight of " << h.weight;
 
+    	return out;
+}
+
+
+/*
+
+The basic implementation of a graph simply uses a set of edges
+
+
+*/
 class Graph{
 
-	int V,E;
   	Edge* edge;
+	int edge_count;
   public:
-	Graph(int V_, int E_):V(V_), E(E_){}
+	int NumVertices,E;
+	Graph(int V_, int E_):NumVertices(V_), E(E_){
+		edge = new Edge[E];
+		edge_count =0;
+	}
+	void insert_edge(int s, int d, int w){
+		
+		edge[edge_count].src = s;
+		edge[edge_count].dest = d;
+		edge[edge_count].weight = w;
+		edge_count++;	
+	}
+
+	int get_src(int j){
+		return edge[j].src;
+	}
+
+	int get_dest(int j){
+		return edge[j].dest;
+	}
+
+	int get_weight(int j){
+		return edge[j].weight;
+	}
+
+	void print(){
+		for(int i =0; i < edge_count; i++){
+
+			std::cout << edge[i] << std::endl;
+		}
+	}
+
+	void topoligicalSortUtil(int v, bool visited[], std::stack<int> &Stack);
+	void topoligicalSort();
 
 	
 
@@ -50,7 +103,7 @@ class Graph{
 
 
 class GraphNode{
-	
+  public:
 	struct AdjListNode{
 		int dest;
 		int weight;
@@ -59,7 +112,6 @@ class GraphNode{
 
 	std::vector<AdjListNode> adjList;
 	
-  public:
 	int id;
 	GraphNode(int id_):id(id_){}
 	GraphNode(){}
@@ -102,13 +154,15 @@ class AdjList_Graph{
 
 	int V;
 	std::unordered_map<int, GraphNode*> nodeList;
-
+	int edge_count;
   public:
 
 	AdjList_Graph(int V_) : V(V_){
 		for(int i =0; i < V_ ; i++){
 			nodeList[i] = new GraphNode(i);
 		}
+
+		edge_count = 0;
 	}
 	int getV(){
 		return V;
@@ -117,6 +171,14 @@ class AdjList_Graph{
 	GraphNode* get_Node(int k){
 		return nodeList[k] ;
 	}
+	std::unordered_map<int, GraphNode*> &return_nodelist(){
+		return nodeList;
+	}
+	int number_of_edges(){
+		return edge_count;
+	}
+
+	
 
 	void print(){
 		GraphNode current_node;
@@ -124,9 +186,7 @@ class AdjList_Graph{
 			current_node = *(it.second);
 			std::cout << "node id: " << current_node.id << " adjacency list: " <<std::endl;
 			current_node.print_adjlist();
-			std::cout << std::endl;
-
-		//	std::cout << "id: "  << it.first;
+		//	std::cout << "node id: "  << it.first;
 		}
 
 	}
@@ -139,6 +199,41 @@ class AdjList_Graph{
 		GraphNode *node1 = nodeList[first_vertex];
 		GraphNode *node2 = nodeList[second_vertex];
 		node1->insert(second_vertex, w);
+		edge_count++;
+	}
+
+
+
+	/*
+
+Here is implementation of depth first search
+
+
+	*/
+	
+	// Recursive util;ity function... 
+	void DFS_Util(int v, bool visited[]){
+		visited[v] = true;
+		std::cout << v <<  " ";
+
+		// Recur for all vertices adjacent to this vertex.
+		GraphNode* node =nodeList[v];
+		std::vector<GraphNode::AdjListNode> list = node->return_adjlist(); 
+		for(int i =0; i < list.size(); i++){
+			if(!visited[list[i].dest]){
+				DFS_Util(list[i].dest, visited);
+			}
+		}
+
+	}
+
+	void DFS(int v){
+		bool *visited = new bool[V];
+		for(int i =0; i < V; i++){
+			visited[i] = false;
+		}
+		DFS_Util(v, visited);
+
 
 	}
 
@@ -146,23 +241,66 @@ class AdjList_Graph{
 
 	}
 
-	void BFS_Util(int s){
+
+	
+
+	/*
+
+
+	Here is the implementation of DFS on the graph...
+
+	my implementation seems convoluted as hell...
+
+	*/
+
+	void BFS(int s){
 
 		bool *visited = new bool[V];
 
 		for(int i=0; i < V; i++)
 			visited[i] = false;
+		visited[s] = true;
 
 		std::list<GraphNode*> queue;
 		// Mark the current node as visited and enqueue it
 
 		queue.push_back(get_Node(s));
 
-		
-	//	while(!queue.empty()){
+		GraphNode *current_node = queue.front();	
 
-			//s = queue.front();	
-			//std::cout << s << " ";
+		std::vector<GraphNode::AdjListNode> list;
+
+		
+
+		while(!queue.empty()){
+
+			current_node = queue.front();
+			list= current_node->return_adjlist();
+			//std::cout << "I am node" << current_node->id <<std::endl;
+			for(int i = 0; i < list.size(); i++){
+				
+			}
+			queue.pop_front();
+
+			// We will loop through all the adjacent vertices of the dequeued vertex 
+
+			for(int i = 0; i < list.size(); i++){
+				//std::cout << "Has this been" << list[i].dest << std::endl;
+
+			//	std::cout << "I am node " << current_node->id << " and I am adjacent to " << list[i].dest << std::endl;
+				if(!visited[list[i].dest]){
+					visited[list[i].dest] = true;
+					queue.push_back(nodeList[list[i].dest]);
+					std::cout << " I am getting queued " << list[i].dest << std::endl;
+
+
+	
+				}
+						
+			}
+		
+	
+			//std::cout << li << " ";
 			//queue.pop_front();
 			//std::cout << "the size of" << *(nodeList[i])->
 // nodeList is the unordered map
@@ -170,7 +308,7 @@ class AdjList_Graph{
 
 
 			//}
-	//	}
+		}
 		
 
 
@@ -186,6 +324,12 @@ class AdjList_Graph{
 Worry about templating the Nodes in the graph later...
 
 
+do BFS... DFS...
+
+
+Write a function that will 
+
+
 
 
 */
@@ -194,11 +338,11 @@ Worry about templating the Nodes in the graph later...
 
 class AdjMatrix_Graph{
   private:
-	int** adjMatrix;
+
 	int numVertices;
 
   public:
-
+	int **adjMatrix;
 	AdjMatrix_Graph(int numVertices_){
 
 		this->numVertices = numVertices_;
@@ -210,6 +354,25 @@ class AdjMatrix_Graph{
 		}
 	}
 
+	AdjMatrix_Graph(int **input_array, int V):adjMatrix(input_array), numVertices(V){
+	
+		
+
+
+	}
+
+
+	void construct_from_array(int** input_array){
+		
+	}
+	
+
+
+	int get_numVertices(){
+
+		return numVertices;
+	}
+
 	void print(){
 		for(int i =0; i < numVertices; i++){
 			
@@ -218,6 +381,8 @@ class AdjMatrix_Graph{
 			}
 			std::cout << std::endl;
 		}
+
+		
 	}
 
 	void addEdge(int i, int j, int w){
@@ -239,3 +404,9 @@ class AdjMatrix_Graph{
 
 
 };
+
+
+
+
+
+#endif

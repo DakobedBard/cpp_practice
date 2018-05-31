@@ -19,4 +19,6 @@ set(longest_common_subsequence longest_common_subsequence.cpp  )
 add_executable(longest_common_subsequence ${longest_common_subsequence} )
 
 
+set(interval interval.cpp  )
+add_executable(interval ${interval} )
 
